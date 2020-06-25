@@ -1,0 +1,182 @@
+# HeadsPlus by Thatsmusic99 - due to the way Bukkit works, this config can only be reloaded on restart.
+# Instructions for setting up can be found at: https://github.com/Thatsmusic99/HeadsPlus/wiki
+base-item:
+  material: SKELETON_SKULL
+  data: 0
+blaze:
+  ingredients:
+  - BLAZE_POWDER
+cavespider:
+  ingredients:
+  - FERMENTED_SPIDER_EYE
+chicken:
+  ingredients:
+  - FEATHER
+cod:
+  ingredients:
+  - COD
+cow:
+  ingredients:
+  - LEATHER
+creeper:
+  ingredients:
+  - GUNPOWDER
+enderman:
+  ingredients:
+  - ENDER_PEARL
+ghast:
+  ingredients:
+  - FIRE_CHARGE
+guardian:
+  ingredients:
+  - PRISMARINE_SHARD
+irongolem:
+  ingredients:
+  - IRON_BLOCK
+mushroomcow:
+  ingredients:
+  - RED_MUSHROOM
+phantom:
+  ingredients:
+  - PHANTOM_MEMBRANE
+pig:
+  ingredients:
+  - PORKCHOP
+pufferfish:
+  ingredients:
+  - PUFFERFISH
+rabbit:
+  ingredients:
+  - RABBIT_FOOT
+sheep:
+  WHITE:
+    ingredients:
+    - WHITE_WOOL
+  ORANGE:
+    ingredients:
+    - ORANGE_WOOL
+  MAGENTA:
+    ingredients:
+    - MAGENTA_WOOL
+  LIGHT_BLUE:
+    ingredients:
+    - LIGHT_BLUE_WOOL
+  YELLOW:
+    ingredients:
+    - YELLOW_WOOL
+  LIME:
+    ingredients:
+    - LIME_WOOL
+  PINK:
+    ingredients:
+    - PINK_WOOL
+  GRAY:
+    ingredients:
+    - GRAY_WOOL
+  LIGHT_GRAY:
+    ingredients:
+    - LIGHT_GRAY_WOOL
+  CYAN:
+    ingredients:
+    - CYAN_WOOL
+  PURPLE:
+    ingredients:
+    - PURPLE_WOOL
+  BLUE:
+    ingredients:
+    - BLUE_WOOL
+  BROWN:
+    ingredients:
+    - BROWN_WOOL
+  GREEN:
+    ingredients:
+    - GREEN_WOOL
+  RED:
+    ingredients:
+    - RED_WOOL
+  BLACK:
+    ingredients:
+    - BLACK_WOOL
+shulker:
+  ingredients:
+  - SHULKER_SHELL
+skeleton:
+  ingredients:
+  - BONE
+slime:
+  ingredients:
+  - SLIME_BALL
+spider:
+  ingredients:
+  - SPIDER_EYE
+squid:
+  ingredients:
+  - INK_SAC
+turtle:
+  ingredients:
+  - TURTLE_HELMET
+villager:
+  ingredients:
+  - EMERALD
+witch:
+  ingredients:
+  - POTION
+zombie:
+  ingredients:
+  - ROTTEN_FLESH
+bat:
+  ingredients: []
+dolphin:
+  ingredients: []
+donkey:
+  ingredients: []
+drowned:
+  ingredients: []
+enderdragon:
+  ingredients: []
+elderguardian:
+  ingredients: []
+endermite:
+  ingredients: []
+evoker:
+  ingredients: []
+horse:
+  ingredients: []
+husk:
+  ingredients: []
+llama:
+  ingredients: []
+magmacube:
+  ingredients: []
+mule:
+  ingredients: []
+parrot:
+  ingredients: []
+polarbear:
+  ingredients: []
+salmon:
+  ingredients: []
+silverfish:
+  ingredients: []
+skeletonhorse:
+  ingredients: []
+snowman:
+  ingredients: []
+stray:
+  ingredients: []
+tropicalfish:
+  ingredients: []
+vex:
+  ingredients: []
+vindicator:
+  ingredients: []
+wither:
+  ingredients: []
+witherskeleton:
+  ingredients: []
+wolf:
+  ingredients: []
+zombiehorse:
+  ingredients: []
+zombievillager:
+  ingredients: []

@@ -1,0 +1,190 @@
+icons:
+  challenges-section:
+    material: LIME_TERRACOTTA
+    display-name: '{section-name}'
+    lore:
+    - '{section-lore}'
+    - '&7{challenges} challenges'
+    replacement: glass
+  menu:
+    material: NETHER_STAR
+    display-name: '&a&lMain Menu'
+    lore: []
+    replacement: glass
+  start:
+    material: ARROW
+    display-name: '&a&lFirst Page'
+    lore: []
+    replacement: glass
+  last:
+    material: ARROW
+    display-name: '&a&lLast Page'
+    lore: []
+    replacement: glass
+  back_2:
+    material: ARROW
+    display-name: '&a&lBack 2'
+    lore: []
+    replacement: glass
+  back_3:
+    material: ARROW
+    display-name: '&a&lBack 3'
+    lore: []
+    replacement: glass
+  next_2:
+    material: ARROW
+    display-name: '&a&lNext 2'
+    lore: []
+    replacement: glass
+  next_3:
+    material: ARROW
+    display-name: '&a&lNext 3'
+    lore: []
+    replacement: glass
+  back:
+    material: ARROW
+    display-name: '&a&lBack'
+    lore: []
+    replacement: glass
+  challenge:
+    material: RED_TERRACOTTA
+    display-name: '{challenge-name}'
+    lore:
+    - '{challenge-lore}'
+    - '&6Reward: &a{challenge-reward}'
+    - '&6XP: &a{challenge-xp}'
+    - '{completed}'
+    replacement: air
+    complete-material: LIME_TERRACOTTA
+  close:
+    material: BARRIER
+    display-name: '&c&lClose Menu'
+    lore: []
+    replacement: glass
+  favourites:
+    material: DIAMOND
+    display-name: '&b&lFavourites'
+    lore: []
+    replacement: glass
+  glass:
+    material: LIGHT_GRAY_STAINED_GLASS_PANE
+    display-name: '&c'
+    lore: []
+    replacement: glass
+  head:
+    material: PLAYER_HEAD
+    display-name: '{head-name}'
+    lore:
+    - '&6[&ePrice&6] &a{price}'
+    - '{favourite}'
+    replacement: air
+  main_menu:
+    material: ARROW
+    display-name: '&a&lMain Menu'
+    lore: []
+    replacement: glass
+  next:
+    material: ARROW
+    display-name: '&a&lNext'
+    lore: []
+    replacement: glass
+  search:
+    material: NAME_TAG
+    display-name: '&6[&e&lSearch Heads&6]'
+    lore: []
+    replacement: glass
+  stats:
+    material: PAPER
+    display-name: '&6&l[&e&lStats&6&l]'
+    lore:
+    - '§aTotal heads: {heads}'
+    - '§aTotal pages: {pages}'
+    - '§aTotal sections: {sections}'
+    - '§aCurrent balance: {balance}'
+    - '§aCurrent section: {section}'
+    replacement: glass
+  air:
+    material: AIR
+    display-name: ''
+    lore: []
+    replacement: glass
+  headsection:
+    material: PLAYER_HEAD
+    display-name: '{head-name}'
+    lore: []
+    replacement: air
+  challenges-easy:
+    material: GREEN_TERRACOTTA
+    display-name: '&8[&a&lEasy&8]'
+    lore: []
+    replacement: glass
+  challenges-easy-medium:
+    material: LIME_TERRACOTTA
+    display-name: '&8[&a&lEasy&8-&6&lMedium&8]'
+    lore: []
+    replacement: glass
+  challenges-medium:
+    material: YELLOW_TERRACOTTA
+    display-name: '&8[&6&lMedium&8]'
+    lore: []
+    replacement: glass
+  challenges-medium-hard:
+    material: ORANGE_TERRACOTTA
+    display-name: '&8[&6&lMedium&8-&c&lHard&8]'
+    lore: []
+    replacement: glass
+  challenges-hard:
+    material: RED_TERRACOTTA
+    display-name: '&8[&c&lHard&8]'
+    lore: []
+    replacement: glass
+  challenges-tedious:
+    material: BLUE_TERRACOTTA
+    display-name: '&8[&c&lTedious&8]'
+    lore: []
+    replacement: glass
+  challenges-tedious-painful:
+    material: PURPLE_TERRACOTTA
+    display-name: '&8[&c&lTedious&8-&5&lPainful&8]'
+    lore: []
+    replacement: glass
+  painful:
+    material: MAGENTA_TERRACOTTA
+    display-name: '&8[&5&lPainful&8]'
+    lore: []
+    replacement: glass
+  painful-deadly:
+    material: PINK_TERRACOTTA
+    display-name: '&8[&5Painful&8-&4Deadly&8]'
+    lore: []
+    replacement: glass
+  deadly:
+    material: RED_TERRACOTTA
+    display-name: '&8[&4Deadly&8]'
+    lore: []
+    replacement: glass
+inventories:
+  challenges-menu:
+    title: 'HeadsPlus Challenges: Menu'
+    icons: GGGGGGGGGGAAAAAAAGGAEARAZAGGAAVAJAAGGAAAAAAAGGGGGXNGGG:GGGGGGGGGGAAAAAAAGGATAIAPAGGAAOADAAGGAAAAAAAGGGGBXNGGG
+    size: 54
+  challenge-section:
+    title: 'HeadsPlus Challenges: {section}'
+    icons: GGGGGGGGGGCCCCCCCGGCCCCCCCGGCCCCCCCGGCCCCCCCGMGGBXNGGG
+    size: 54
+  favourites:
+    title: 'HeadsPlus Head selector: {page}/{pages}'
+    icons: GGGGSGGGKGHHHHHHHGGHHHHHHHGGHHHHHHHGGHHHHHHHGMGGBXNGGG
+    size: 54
+  headmenu:
+    title: 'HeadsPlus Head Selector: {page}/{pages}'
+    icons: FGGGSGGGKGLLLLLLLGGLLLLLLLGGLLLLLLLGGLLLLLLLGGGGBXNGGG
+    size: 54
+  headsection:
+    title: 'HeadsPlus Head Selector: {page}/{pages}'
+    icons: FGGGSGGGKGHHHHHHHGGHHHHHHHGGHHHHHHHGGHHHHHHHGMGGBXNGGG
+    size: 54
+  sellheadmenu:
+    title: HeadsPlus Sellhead menu
+    icons: GGGGGGGGGGHHHHHHHGGHHHHHHHGGHHHHHHHGGHHHHHHHGGGGBXNGGG
+    size: 54

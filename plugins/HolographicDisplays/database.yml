@@ -1,0 +1,24 @@
+spawninfo:
+  location: Plots, -46.500, 143.000, -44.500
+  lines:
+  - '&b&oWelcome to &f&oApex Hosting''s'
+  - '&6&oCreative Gametype!'
+  - '&8&m---------'
+  - '&7&oFly out from spawn and'
+  - '&7&oclaim a &6&oPlot &d&o(/plot auto)&7&oto get'
+  - '&7&ostarted! Your only limit is'
+  - '&7&oyour own creativity!'
+  - '&8&m---------'
+  - '&7&o(/hd edit spawninfo)'
+worldedit:
+  location: Plots, -53.500, 142.500, -59.500
+  lines:
+  - '&6&lWorldEdit Info'
+plotclaim:
+  location: Plots, -39.500, 142.500, -59.500
+  lines:
+  - '&6&lPlotClaim Info'
+ranks:
+  location: Plots, -46.500, 142.500, -35.500
+  lines:
+  - '&b&lServer Ranks'

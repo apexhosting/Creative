@@ -1,0 +1,248 @@
+groups:
+  Builder:
+    options:
+      default: true
+      prefix: '&8[&9Builder&8] &f'
+    permissions:
+    - headsplus.maincommand
+    - headsplus.myhead
+    - headsplus.heads
+    - headsplus.head
+    - rfchairs.toggle
+    - rfchairs.use
+    - astools.summon
+    - astools.command
+    - astools.head
+    - astools.clone
+    - astools.use
+    - headsinv.help
+    - headsinv.search
+    - headsinv.inventory
+    - headsinv.playerhead
+    - headsinv.myhead
+    - modifyworld.*
+    - plots.use
+    - plots.info
+    - plots.claim
+    - plots.clear
+    - plots.delete
+    - plots.list
+    - plots.list.mine
+    - plots.list.shared
+    - plots.set
+    - plots.set.home
+    - plots.visit
+    - plots.set.flag
+    - plots.list.world
+    - plots.list.all
+    - plots.visit.owned
+    - plots.visit.shared
+    - plots.flag.add
+    - plots.flag.remove
+    - plots.flag.list
+    - plots.flag.info
+    - plots.flag
+    - plots.confirm
+    - plots.trust
+    - plots.untrust
+    - plots.plot.2
+    - plots.remove
+    - plots.list.world.plotworld
+    - essentials.afk
+    - essentials.pweather
+    - essentials.ptime
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.back
+    - essentials.ban.notify
+    - essentials.help
+    - essentials.helpop
+    - essentials.home
+    - essentials.sethome
+    - essentials.sethome.multiple.basic
+    - essentials.ignore
+    - essentials.itemdb
+    - essentials.kick.notify
+    - essentials.list
+    - essentials.mail
+    - essentials.mail.clear
+    - essentials.mail.send
+    - essentials.motd
+    - essentials.msg
+    - essentials.mute.notify
+    - essentials.ping
+    - essentials.realname
+    - essentials.rules
+    - essentials.seen
+    - essentials.signs.use.disposal
+    - essentials.signs.use.free
+    - essentials.spawn
+    - essentials.suicide
+  MasterBuilder:
+    options:
+      default: false
+      prefix: '&8[&2MasterBuilder&8] &f'
+    inheritance:
+    - builder
+    permissions:
+    - modifyworld.*
+    - plots.merge
+    - plots.merge.4
+    - plots.plot.4
+    - plots.set.biome
+    - plots.unlink
+    - essentials.item
+    - essentials.gamemode
+    - essentials.gamemode.creative
+    - essentials.gamemode.survival
+    - essentials.gamemode.adventure
+    - essentials.fly
+    - essentials.oversizedstacks
+    - worldguard.stack.illegitimate
+    - worldguard.stack
+    - essentials.sethome.multiple.masterbuilder
+  Designer:
+    options:
+      default: false
+      prefix: '&8[&eDesigner&8] &f'
+    inheritance:
+    - builder
+    - masterbuilder
+    permissions:
+    - modifyworld.*
+    - plots.merge.6
+    - plots.plot.6
+    - plots.toggle
+    - plots.toggle.chat
+    - plots.toggle.titles
+    - worldedit.navigation.jumpto.command
+    - worldedit.navigation.jumpto.tool
+    - worldedit.navigation.thru.tool
+    - essentials.sethome.multiple.designer
+  Engineer:
+    options:
+      default: false
+      prefix: '&8[&bEngineer&8] &f'
+    inheritance:
+    - builder
+    - masterbuilder
+    - designer
+    permissions:
+    - modifyworld.*
+    - worldedit.biome.info
+    - worldedit.biome.set
+    - worldedit.biome.list
+    - worldedit.clipboard.cut
+    - worldedit.clipboard.paste
+    - worldedit.clipboard.clear
+    - worldedit.clipboard.copy
+    - worldedit.clipboard.flip
+    - worldedit.clipboard.rotate
+    - worldedit.help
+    - worldedit.generation.cylinder
+    - worldedit.generation.sphere
+    - worldedit.generation.pyramid
+    - worldedit.history.undo
+    - worldedit.history.redo
+    - worldedit.region.hollow
+    - worldedit.region.overlay
+    - worldedit.region.center
+    - worldedit.region.naturalize
+    - worldedit.region.walls
+    - worldedit.region.faces
+    - worldedit.region.smooth
+    - worldedit.region.move
+    - worldedit.region.replace
+    - worldedit.region.stack
+    - worldedit.region.set
+    - worldedit.selection.pos
+    - worldedit.selection.hpos
+    - worldedit.wand
+    - worldedit.help
+    - worldedit.analysis.count
+    - worldedit.navigation.unstuck
+    - essentials.sethome.multiple.engineer
+  Architect:
+    options:
+      default: false
+      prefix: '&8[&5Architect&8] &f'
+    inheritance:
+    - builder
+    - masterbuilder
+    - designer
+    - engineer
+    permissions:
+    - modifyworld.*
+    - worldedit.navigation.ascend
+    - worldedit.navigation.descend
+    - worldedit.navigation.ceiling
+    - worldedit.navigation.thru.command
+    - worldedit.navigation.up
+    - worldedit.region.hollow
+    - worldedit.region.line
+    - worldedit.region.curve
+    - worldedit.tool.tree
+    - worldedit.brush.sphere
+    - worldedit.brush.cylinder
+    - worldedit.brush.clipboard
+    - worldedit.brush.smooth
+    - worldedit.brush.ex
+    - worldedit.tool.deltree
+    - worldedit.brush.options.material
+    - worldedit.brush.options.range
+    - worldedit.brush.options.size
+    - worldedit.brush.options.mask
+    - worldedit.tool.tree
+    - worldedit.drain
+    - worldedit.fixlava
+    - worldedit.fixwater
+    - worldedit.removeabove
+    - worldedit.removebelow
+    - worldedit.removenear
+    - worldedit.replacenear
+    - worldedit.snow
+    - worldedit.thaw
+    - worldedit.green
+    - worldedit.fill
+    - multiverse.access.*
+    - multiverse.teleport.*
+    - multiverse.core.tp.self
+    - multiverse.core.tp.*
+    - essentials.sethome.multiple.architect
+  Terraformer:
+    options:
+      default: false
+      prefix: '&8[&aTerraformer&8] &7'
+    inheritance:
+    - builder
+    - masterbuilder
+    - designer
+    - engineer
+    - architect
+    permissions:
+    - modifyworld.*
+    - voxelsniper.*
+    - essentials.powertool
+    - essentials.sethome.multiple.terraformer
+  Admin:
+    permissions:
+    - '*'
+    options:
+      prefix: '&4[&cAdmin&4]&c'
+  Mod:
+    options:
+      prefix: '&b&l[&3Mod&b&l]&3'
+    permissions:
+    - essentials.mute
+    - essentials.kick
+    - essentials.ban
+schema-version: 1
+users:
+  c0a68af6-e4ee-4b2b-b6bd-4287d97f0755:
+    permissions:
+    - '*'
+    options:
+      name: robert_beckley
+    group:
+    - Admin

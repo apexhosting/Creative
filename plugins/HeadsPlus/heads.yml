@@ -1,0 +1,727 @@
+# HeadsPlus by Thatsmusic99
+version: 0
+defaults:
+  price: 0.0
+  lore:
+  - '&7Price: &6{price}'
+  - '&7Type: &a{type}'
+  display-name: '{type} Head'
+  interact-name: '{type}'
+blaze:
+  name:
+  - MHF_Blaze
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+cavespider:
+  name:
+  - MHF_Cavespider
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+chicken:
+  name:
+  - MHF_Chicken
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+cow:
+  name:
+  - MHF_Cow
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+creeper:
+  name:
+  - MHF_Creeper
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+enderman:
+  name:
+  - MHF_Enderman
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+ghast:
+  name:
+  - MHF_Ghast
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+guardian:
+  name:
+  - MHF_Guardian
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+irongolem:
+  name:
+  - MHF_Golem
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+mushroomcow:
+  name:
+  - MHF_Mushroomcow
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+rabbit:
+  name:
+  - MHF_Rabbit
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+pig:
+  name:
+  - MHF_Pig
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+sheep:
+  name:
+    default:
+    - MHF_Sheep
+    WHITE:
+    - HP#white_sheep
+    ORANGE:
+    - HP#orange_sheep
+    MAGENTA:
+    - HP#magenta_sheep
+    LIGHT_BLUE:
+    - HP#light_blue_sheep
+    YELLOW:
+    - HP#yellow_sheep
+    LIME:
+    - HP#lime_sheep
+    PINK:
+    - HP#pink_sheep
+    GRAY:
+    - HP#gray_sheep
+    LIGHT_GRAY:
+    - HP#silver_sheep
+    CYAN:
+    - HP#cyan_sheep
+    PURPLE:
+    - HP#purple_sheep
+    BLUE:
+    - HP#blue_sheep
+    BROWN:
+    - HP#brown_sheep
+    GREEN:
+    - HP#green_sheep
+    RED:
+    - HP#red_sheep
+    BLACK:
+    - HP#black_sheep
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+skeleton:
+  name:
+  - MHF_Skeleton
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+slime:
+  name:
+  - MHF_Slime
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+spider:
+  name:
+  - MHF_Spider
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+squid:
+  name:
+  - MHF_Squid
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+villager:
+  name:
+  - MHF_Villager
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+witch:
+  name:
+  - MHF_Witch
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+zombie:
+  name:
+  - MHF_Zombie
+  interact-name: '{default}'
+  display-name: '{default}'
+  chance: 25
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+bat:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+cat:
+  name:
+    default: []
+    TABBY:
+    - HP#tabby_cat
+    BLACK:
+    - HP#black_cat
+    RED:
+    - HP#red_cat
+    SIAMESE:
+    - HP#siamese_cat
+    BRITISH_SHORTHAIR:
+    - HP#british_shorthair_cat
+    CALICO:
+    - HP#calico_cat
+    PERSIAN:
+    - HP#persian_cat
+    RAGDOLL:
+    - HP#ragdoll_cat
+    WHITE:
+    - HP#white_cat
+    JELLIE:
+    - HP#jellie_cat
+    ALL_BLACK:
+    - HP#all_black_cat
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+cod:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+dolphin:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+donkey:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+drowned:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+enderdragon:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+elderguardian:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+endermite:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+evoker:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+fox:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+husk:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+llama:
+  name:
+    default: []
+    CREAMY:
+    - HP#creamy_llama
+    WHITE:
+    - HP#white_llama
+    BROWN:
+    - HP#brown_llama
+    GRAY:
+    - HP#gray_llama
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+magmacube:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+mule:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+ocelot:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+panda:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+parrot:
+  name:
+    default: []
+    RED:
+    - HP#red_parrot
+    BLUE:
+    - HP#blue_parrot
+    GREEN:
+    - HP#green_parrot
+    CYAN:
+    - HP#cyan_parrot
+    GRAY:
+    - HP#gray_parrot
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+phantom:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+pigzombie:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+pillager:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+polarbear:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+pufferfish:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+ravager:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+salmon:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+shulker:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+silverfish:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+skeletonhorse:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+snowman:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+stray:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+trader_llama:
+  name:
+    default: []
+    CREAMY:
+    - HP#creamy_trader_llama
+    WHITE:
+    - HP#white_trader_llama
+    BROWN:
+    - HP#brown_trader_llama
+    GRAY:
+    - HP#gray_trader_llama
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+tropicalfish:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+turtle:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+vex:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+vindicator:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+wandering_trader:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+wither:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+witherskeleton:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+wolf:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+zombiehorse:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+zombievillager:
+  name: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'
+player:
+  chance: 100
+  display-name: '{player}''s head'
+  price: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore:
+  - '&7Price: &6{price}'
+  - '&7Player: &a{player}'
+appleHeadN: Apple
+appleN: MHF_apple
+cakeHeadN: Cake
+cakeN: MHF_cake
+chestHeadN: Chest
+chestN: MHF_chest
+cactusHeadN: Cactus
+cactusN: MHF_cactus
+melonHeadN: Melon
+melonN: MHF_melon
+pumpkinHeadN: Pumpkin
+pumpkinN: MHF_pumpkin
+brownCoconutHeadEN: Brown Coconut
+brownCoconutHeadN: MHF_CoconutB
+greenCoconutHeadEN: Green Coconut
+greenCoconutHeadN: MHF_CoconutG
+oakLogHeadEN: Oak Log
+oakLogHeadN: MHF_OakLog
+present1HeadEN: Present
+present1HeadN: MHF_Present1
+present2HeadEN: Present
+present2HeadN: MHF_Present2
+tntHeadEN: TNT
+tntHeadN: MHF_TNT
+tnt2HeadEN: TNT
+tnt2HeadN: MHF_TNT
+arrowUpHeadEN: Arrow pointing up
+arrowUpHeadN: MHF_ArrowUp
+arrowDownHeadEN: Arrow pointing down
+arrowDownHeadN: MHF_ArrowDown
+questionHeadEN: Question
+questionHeadN: MHF_Question
+arrowLeftHeadEN: Arrow pointing left
+arrowLeftHeadN: MHF_ArrowLeft
+arrowRightHeadEN: Arrow pointing right
+arrowRightHeadN: MHF_ArrowRight
+exclamationHeadEN: Exclamation
+exclamationHeadN: MHF_Exclamation
+horse:
+  name:
+    default: []
+    WHITE: []
+    CREAMY: []
+    CHESTNUT: []
+    BROWN: []
+    BLACK: []
+    GRAY: []
+    DARK_BROWN: []
+  chance: 0
+  display-name: '{default}'
+  price: '{default}'
+  interact-name: '{default}'
+  mask-effects: []
+  mask-amplifiers: []
+  lore: '{default}'

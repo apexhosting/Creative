@@ -1,0 +1,99 @@
+# HeadsPlus by Thatsmusic99 - Config wiki: https://github.com/Thatsmusic99/HeadsPlus/wiki/Configuring-config.yml
+blacklist:
+  default:
+    enabled: true
+    list: []
+  world:
+    enabled: true
+    list: []
+whitelist:
+  default:
+    enabled: false
+    list: []
+  world:
+    enabled: false
+    list: []
+theme-colours:
+  '1': DARK_BLUE
+  '2': GOLD
+  '3': GRAY
+  '4': DARK_AQUA
+mysql:
+  host: localhost
+  port: '3306'
+  database: db
+  username: username
+  password: password
+  enabled: false
+plugin:
+  larger-menus: false
+  autograb:
+    enabled: false
+    add-as-enabled: true
+    section: players
+    title: '&8[&6{player}&8]'
+    price: default
+  mechanics:
+    leaderboards:
+      cache-boards: true
+      cache-lifetime-seconds: 300
+    xp:
+      crafting: 10
+      head-drops: 10
+      selling: 10
+    broadcasts:
+      level-up: true
+      challenge-complete: true
+    theme: classic
+    plugin-theme-dont-change: classic
+    update:
+      check: true
+      notify: true
+    allow-looting-enchantment: true
+    looting:
+      ignored-entities: []
+      use-old-system: false
+    stop-placement-of-sellable-heads: false
+    sellhead-gui: true
+    anvil-menu-search: false
+    mythicmobs:
+      no-hp-drops: true
+    round-balance-to-2-d-p: true
+    boss-bar:
+      enabled: true
+      color: RED
+      title: '&c&lXP to next HP level'
+      lifetime: 5
+    debug:
+      create-debug-files: true
+      print-stacktraces-in-console: true
+      console:
+        enabled: false
+        level: 1
+  perks:
+    sell-heads: true
+    drop-heads: true
+    drops:
+      ignore-players: []
+      needs-killer: false
+      entities-requiring-killer:
+      - player
+    craft-heads: false
+    disable-crafting: false
+    heads-selector: true
+    challenges: true
+    leaderboards: true
+    levels: true
+    player-death-messages: false
+    smite-player-if-they-get-a-head: false
+    mask-powerups: true
+    pvp:
+      player-balance-competition: false
+      percentage-lost: 0.05
+      percentage-balance-for-head: 0.05
+    death-messages:
+    - '&b{player} &3was killed by &b{killer} &3and had their head removed!'
+    - '&b{killer} &3finished the job and removed the worst part of &b{player}&3: The
+      head.'
+    - '&3The server owner screamed at &b{player} &3"OFF WITH HIS HEAD!"&3. &b{killer}
+      &3finished the job.'
