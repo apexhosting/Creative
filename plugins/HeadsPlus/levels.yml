@@ -1,340 +1,395 @@
-version: 0.1
+version: 0.3
 levels:
   grass:
     display-name: '&2&lGrass'
     added-version: 0.0
     required-xp: 0
-    hierachy: 1
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 1
   dirt:
     display-name: '&6&lDirt'
     added-version: 0.0
     required-xp: 250
-    hierachy: 2
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 2
   stone:
     display-name: '&7&lStone'
     added-version: 0.0
     required-xp: 750
-    hierachy: 3
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 3
   coal:
     display-name: '&8&lCoal'
     added-version: 0.0
     required-xp: 1500
-    hierachy: 4
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 4
   coal_2:
     display-name: '&8&lCoal &0&lII'
     added-version: 0.0
     required-xp: 2000
-    hierachy: 5
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 5
   iron:
     display-name: '&f&lIron'
     added-version: 0.0
     required-xp: 2750
-    hierachy: 6
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 6
   iron_2:
     display-name: '&f&lIron &7&lII'
     added-version: 0.0
     required-xp: 3500
-    hierachy: 7
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 7
   redstone:
     display-name: '&c&lRedstone'
     added-version: 0.0
     required-xp: 4500
-    hierachy: 8
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 8
   redstone_2:
     display-name: '&l&cRedstone &4&lII'
     added-version: 0.0
     required-xp: 5500
-    hierachy: 9
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 9
   lapis:
     display-name: '&9&lLapis Lazuli'
     added-version: 0.0
     required-xp: 7000
-    hierachy: 10
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 10
   lapis_2:
     display-name: '&9&lLapis Lazuli &1&lII'
     added-version: 0.0
     required-xp: 8000
-    hierachy: 11
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 11
   lapis_3:
     display-name: '&9&lLapis Lazuli &1&lIII'
     added-version: 0.0
     required-xp: 9000
-    hierachy: 12
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 12
   gold:
     display-name: '&e&lGold'
     added-version: 0.0
     required-xp: 10000
-    hierachy: 13
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 13
   gold_2:
     display-name: '&e&lGold &6&lII'
     added-version: 0.0
     required-xp: 12500
-    hierachy: 14
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 14
   gold_3:
     display-name: '&e&lGold &6&lIII'
     added-version: 0.0
     required-xp: 15000
-    hierachy: 15
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 15
   diamond:
     display-name: '&b&lDiamond'
     added-version: 0.0
     required-xp: 17000
-    hierachy: 16
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 16
   diamond_2:
     display-name: '&b&lDiamond &3&lII'
     added-version: 0.0
     required-xp: 20000
-    hierachy: 17
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 17
   diamond_3:
     display-name: '&b&lDiamond &3&lIII'
     added-version: 0.0
     required-xp: 22500
-    hierachy: 18
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 18
   obsidian:
     display-name: '&8&lObsidian'
     added-version: 0.0
     required-xp: 25000
-    hierachy: 19
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 19
   obsidian_2:
     display-name: '&8&lObsidian &0&lII'
     added-version: 0.0
     required-xp: 30000
-    hierachy: 20
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 20
   obsidian_3:
     display-name: '&8&lObsidian &0&lIII'
     added-version: 0.0
     required-xp: 35000
-    hierachy: 21
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 21
   obsidian_4:
     display-name: '&8&lObsidian &0&lIV'
     added-version: 0.0
     required-xp: 40000
-    hierachy: 22
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 22
   emerald:
     display-name: '&a&lEmerald'
     added-version: 0.0
     required-xp: 45000
-    hierachy: 23
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 23
   emerald_2:
     display-name: '&a&lEmerald &2&lII'
     added-version: 0.0
     required-xp: 50000
-    hierachy: 24
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 24
   emerald_3:
     display-name: '&a&lEmerald &2&lIII'
     added-version: 0.0
     required-xp: 60000
-    hierachy: 25
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 25
   emerald_4:
     display-name: '&a&lEmerald &2&lIV'
     added-version: 0.0
     required-xp: 75000
-    hierachy: 26
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 26
   bedrock:
     display-name: '&5&lBedrock'
     added-version: 0.0
     required-xp: 100000
-    hierachy: 27
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 27
   bedrock_2:
     display-name: '&5&lBedrock &0&lII'
     added-version: 0.0
     required-xp: 125000
-    hierachy: 28
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 28
   bedrock_3:
     display-name: '&5&lBedrock &0&lIII'
     added-version: 0.0
     required-xp: 150000
-    hierachy: 29
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 29
   bedrock_4:
     display-name: '&5&lBedrock &0&lIV'
     added-version: 0.0
     required-xp: 200000
-    hierachy: 30
     rewards:
       enabled: false
       reward-type: ECO
       reward-value: 300
       item-amount: 0
       command-sender: player
+    hierarchy: 30
   bedrock_5:
     display-name: '&5&lBedrock &0&lV'
     added-version: 0.0
     required-xp: 300000
-    hierachy: 31
+    rewards:
+      enabled: false
+      reward-type: ECO
+      reward-value: 300
+      item-amount: 0
+      command-sender: player
+    hierarchy: 31
+  netherite:
+    display-name: '&4&lNetherite I'
+    added-version: 0.2
+    required-xp: 500000
+    hierarchy: 32
+    rewards:
+      enabled: false
+      reward-type: ECO
+      reward-value: 300
+      item-amount: 0
+      command-sender: player
+  netherite_2:
+    display-name: '&4&lNetherite II'
+    added-version: 0.2
+    required-xp: 750000
+    hierarchy: 33
+    rewards:
+      enabled: false
+      reward-type: ECO
+      reward-value: 300
+      item-amount: 0
+      command-sender: player
+  netherite_3:
+    display-name: '&4&lNetherite III'
+    added-version: 0.2
+    required-xp: 1000000
+    hierarchy: 34
+    rewards:
+      enabled: false
+      reward-type: ECO
+      reward-value: 300
+      item-amount: 0
+      command-sender: player
+  netherite_4:
+    display-name: '&4&lNetherite IV'
+    added-version: 0.2
+    required-xp: 1500000
+    hierarchy: 35
+    rewards:
+      enabled: false
+      reward-type: ECO
+      reward-value: 300
+      item-amount: 0
+      command-sender: player
+  netherite_5:
+    display-name: '&4&lNetherite V'
+    added-version: 0.2
+    required-xp: 2000000
+    hierarchy: 36
     rewards:
       enabled: false
       reward-type: ECO
