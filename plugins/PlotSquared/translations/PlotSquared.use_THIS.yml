@@ -7,6 +7,8 @@ move:
   move_success: $4Successfully moved plot.
   copy_success: $4Successfully copied plot.
   requires_unowned: $2The location specified is already occupied.
+  move_merged: $2Merged plots may not be moved. Please unmerge the plot before performing
+    the move.
 set:
   set_attribute: $4Successfully set %s0 set to %s1
 web:
@@ -58,9 +60,9 @@ records:
   notify_leave: $2%player $2left your plot ($1%plot$2)
 swap:
   swap_overlap: $2The proposed areas are not allowed to overlap
-  swap_dimensions: $2The proposed areas must have comparable dimensions
-  swap_syntax: $2/plot swap <id>
   swap_success: $4Successfully swapped plots
+  swap_merged: $2Merged plots may not be swapped. Please unmerge the plot before performing
+    the swap.
 comment:
   inbox_notification: '%s unread messages. Use /plot inbox'
   not_valid_inbox_index: $2No comment at index %s
@@ -71,7 +73,6 @@ comment:
   no_perm_inbox_modify: $2You do not have permission to modify that inbox
   no_plot_inbox: $2You must stand in or supply a plot argument
   comment_added: $4A comment has been left
-  comment_header: $2&m---------&r $1Comments $2&m---------&r
   inbox_empty: $2No comments
   comment_removed_success: $4Successfully deleted comment/s:n$2 - '$3%s$2'
   comment_removed_failure: $4Failed to delete comment!
@@ -125,19 +126,40 @@ setup:
     you will need to set the generator manually using the bukkit.yml or your chosen
     world management plugin.
   setup_world_taken: $2%s is already a world
-  setup_missing_world: $2You need to specify a world name ($1/plot setup &l<world>$1
-    <generator>$2)&-$1Additional commands:&-$2 - $1/plot setup <value>&-$2 - $1/plot
-    setup back&-$2 - $1/plot setup cancel
-  setup_missing_generator: $2You need to specify a generator ($1/plot setup <world>
-    &l<generator>&r$2)&-$1Additional commands:&-$2 - $1/plot setup <value>&-$2 - $1/plot
-    setup back&-$2 - $1/plot setup cancel
-  setup_invalid_generator: '$2Invalid generator. Possible options: %s'
+  setup_not_started: $1No setup started. Use $2/plot setup $1to start a setup process.
+  setup_cancelled: $7Cancelled setup.
+  setup_world_name: $1What do you want your world to be called?
+  setup_world_name_error: $7You need to choose a world name!
+  setup_world_name_taken: $7That world name is already taken!
+  setup_world_generator_error: $7You must choose a generator!
+  setup_world_type: $1What world type do you want?&-$3 - $6normal$3 - $2Standard plot
+    generation&-$3 - $6augmented$3 - $2Plot generation with terrain&-$3 - $6partial$3
+    - $2Vanilla with clusters of plots
+  setup_world_type_error: $7You must choose a world type!
+  setup_wrong_generator: $7The specified generator does not identify as BukkitPlotGenerator$3
+    - $6You may need to manually configure the other plugin
+  setup_world_name_format: '$7Non [a-z0-9_.-] character in the world name:$1 '
+  setup_world_apply_plotsquared: $7The world you specified already exists. After restarting,
+    new terrain will use $1PlotSquared$7, however you may need to reset the world
+    for it to generate correctly!
+  setup_partial_area: $1What terrain would you like in plots?&-$3 - $6NONE$3 - $2No
+    terrain at all&-$3 - $6ORE$3 - $2Just some ore veins and trees&-$3 - $6ROAD$3
+    - $2Terrain separated by roads&-$3 - $6ALL$3 - $2Entirely vanilla generation
+  setup_partial_area_error: $7You must choose the terrain!
+  setup_area_name: $1What would you like this area called?
+  setup_area_non_alphanumerical: $7The area id must be alphanumerical!
+  setup_area_invalid_id: $7You must choose an area id that is not in use!
+  setup_area_min_plot_id: $1What should be the minimum Plot Id?
+  setup_area_min_plot_id_error: $7You must choose a valid minimum Plot Id!
+  setup_area_max_plot_id: $1What should be the maximum Plot Id?
+  setup_area_max_plot_id_error: $7You must choose a valid maximum Plot Id!
+  setup_area_plot_id_greater_than_minimum: $7The max PlotId must be greater than the
+    minimum!
 schematics:
   schematic_too_large: $2The plot is too large for this action!
   schematic_missing_arg: '$2You need to specify an argument. Possible values: $1test
     <name>$2 , $1save$2 , $1paste $2, $1exportall'
   schematic_invalid: '$2That is not a valid schematic. Reason: $2%s'
-  schematic_valid: $2That is a valid schematic
   schematic_paste_failed: $2Failed to paste the schematic
   schematic_paste_success: $4The schematic pasted successfully
   schematic_list: '$4Saved Schematics: $1%s'
@@ -147,11 +169,10 @@ schematics:
   schematic_exportall_started: $1Starting export...
   schematic_exportall_world_args: $1Need world argument. Use $3/plot sch exportall
     <area>
-  schematic_exportall_mass_started: $1Schematic mass export has been started. This
-    may take a while
-  schematic_exportall_count: $1Found $3%s $1plots...
   schematic_exportall_finished: $1Finished mass export
   schematic_exportall_single_finished: $1Finished export
+  schematic_paste_merged: $2Schematics cannot be pasted onto merged plots. Please
+    unmerge the plot before performing the paste.
 titles:
   title_entered_plot: '$1Plot: %world%;%x%;%z%'
   title_entered_plot_sub: $4Owned by %s
@@ -191,7 +212,6 @@ merge:
   merge_accepted: $2The merge request has been accepted
   success_merge: $2Plots have been merged!
   merge_requested: $2Successfully sent a merge request
-  no_perm_merge: '$2You are not the owner of the plot: $1%plot%'
   no_available_automerge: $2You do not own any adjacent plots in the specified direction
     or are not allowed to merge to the required size.
   unlink_impossible: $2You can only unlink a mega-plot
@@ -211,7 +231,6 @@ errors:
   command_went_wrong: $2Something went wrong when executing that command...
   no_free_plots: $2There are no free plots available
   not_in_plot: $2You're not in a plot
-  not_loaded: $2The plot could not be loaded
   not_in_cluster: $2You must be within a plot cluster to perform that action
   not_in_plot_world: $2You're not in a plot area
   plotworld_incompatible: $2The two worlds must be compatible
@@ -220,6 +239,9 @@ errors:
   no_plots: $2You don't have any plots
   wait_for_timer: $2A setblock timer is bound to either the current plot or you. Please
     wait for it to finish
+  player_no_plots: $2That player does not own any plots
+  tile_entity_cap_reached: $2The total number of tile entities in this chunk may not
+    exceed $1%s
 paste:
   debug_report_created: '$1Uploaded a full debug to: $1%url%'
 purge:
@@ -252,6 +274,11 @@ invalid:
   not_valid_number: '$2That''s not a valid number within the range: %s'
   not_valid_plot_id: $2That's not a valid plot id.
   found_no_plots: $2Found no plots with your search query
+  component_illegal_block: $2You are not allowed to generate a component containg
+    the block '%s'
+  number_not_in_range: 'That''s not a valid number within the range: (%s, %s)'
+  number_not_positive: 'That''s not a positive number: %s'
+  not_a_number: '%s is not a valid number.'
 need:
   need_block: $2You've got to specify a block
 near:
@@ -265,9 +292,6 @@ info:
   plot_unowned: $2The current plot must have an owner to perform this action
   plot_info_unclaimed: $2Plot $1%s$2 is not yet claimed
   plot_info_header: $3&m---------&r $1INFO $3&m---------
-  plot_info: '$1ID: $2%id%$1&-$1Alias: $2%alias%$1&-$1Owner: $2%owner%$1&-$1Biome:
-    $2%biome%$1&-$1Can Build: $2%build%$1&-$1Rating: $2%rating%&-$1Seen: $2%seen%&-$1Trusted:
-    $2%trusted%$1&-$1Members: $2%members%$1&-$1Denied: $2%denied%$1&-$1Flags: $2%flags%'
   plot_info_footer: $3&m---------&r $1INFO $3&m---------
   plot_info_trusted: $1Trusted:$2 %trusted%
   plot_info_members: $1Members:$2 %members%
@@ -286,6 +310,12 @@ info:
   server: Server
   plot_info_hidden: $2You cannot view the information about this plot
   plot_info_likes: $1Like Ratio:$2 %likes%%
+  plot_info_format: '$1ID: $2%id%$1&-$1Area: $2%area%$1&-$1Alias:$2%alias%$1&-$1Owner:$2%owner%$1&-$1Biome:
+    $2%biome%$1&-$1Can Build: $2%build%$1&-$1Rating: $2%rating%&-$1Seen: $2%seen%&-$1Trusted:$2%trusted%$1&-$1Members:$2%members%$1&-$1Denied:$2%denied%$1&-$1Flags:$2%flags%&-$1Description:
+    $2%desc%$1'
+  plot_no_description: No description set.
+  plot_caps_header: $3&m---------&r $1CAPS $3&m---------
+  plot_caps_format: '$2- Cap Type: $1%cap% $2| Status: $1%current%$2/$1%limit% $2($1%percentage%%$2)'
 working:
   generating_component: $1Started generating component from your settings
   clearing_done: $4Clear completed! Took %sms.
@@ -299,20 +329,12 @@ list:
   area_list_header_paged: $2(Page $1%cur$2/$1%max$2) $1List of %amount% areas
   plot_list_header_paged: $2(Page $1%cur$2/$1%max$2) $1List of %amount% plots
   plot_list_header: $1List of %word% plots
-  plot_list_item: $2>> $1%id$2:$1%world $2- $1%owner
-  plot_list_item_ordered: $2[$1%in$2] >> $1%id$2:$1%world $2- $1%owner
-  plot_list_footer: $2>> $1%word% a total of $2%num% $1claimed %plot%.
 chat:
   plot_chat_spy_format: '$2[$1Plot Spy$2][$1%plot_id%$2] $1%sender%$2: $1%msg%'
   plot_chat_format: '$2[$1Plot Chat$2][$1%plot_id%$2] $1%sender%$2: $1%msg%'
   plot_chat_forced: $2This world forces everyone to use plot chat.
-  plot_chat_on: $4Plot chat enabled.
-  plot_chat_off: $4Plot chat disabled.
 deny:
   denied_added: $4You successfully denied the player from this plot
-  denied_need_argument: $2Arguments are missing. $1/plot denied add <name> $2or $1/plot
-    denied remove <name>
-  was_not_denied: $2That player was not denied on this plot
   you_got_denied: $4You are denied from the plot you were previously on, and got teleported
     to spawn
   cant_remove_owner: $2You can't remove the plot owner
@@ -320,7 +342,6 @@ kick:
   you_got_kicked: $4You got kicked!
 flag:
   flag_key: '$2Key: %s'
-  flag_type: '$2Type: %s'
   flag_desc: '$2Desc: %s'
   not_valid_flag: $2That is not a valid flag
   not_valid_flag_suggested: '$2That is not a valid flag. Did you mean: $1%s'
@@ -329,10 +350,21 @@ flag:
   flag_not_added: $2The flag could not be added
   flag_removed: $4Successfully removed flag
   flag_added: $4Successfully added flag
-  flag_list_entry: '$2%s: $1%s'
+  flag_partially_removed: $4Successfully removed flag value(s)
+  flag_list_see_info: Click to view information about the flag
+  flag_parse_error: '$2Failed to parse flag ''%flag_name%'', value ''%flag_value%'':
+    %error%'
+  flag_info_header: $3&m---------&r $1Plot² Flags $3&m---------
+  flag_info_footer: $3&m---------&r $1Plot² Flags $3&m---------
+  flag_info_color_key: $1
+  flag_info_color_value: $2
+  flag_info_name: 'Name: '
+  flag_info_category: 'Category: '
+  flag_info_description: 'Description: '
+  flag_info_example: 'Example: '
+  flag_info_default_value: 'Default Value: '
 trusted:
   trusted_added: $4You successfully trusted a user to the plot
-  was_not_added: $2That player was not trusted on this plot
   plot_removed_user: $1Plot %s of which you were added to has been deleted due to
     owner inactivity
 member:
@@ -365,12 +397,8 @@ help:
 grants:
   granted_plots: '$1Result: $2%s $1grants left'
   granted_plot: $1You granted %s0 plot to $2%s1
-  granted_plot_failed: '$1Grant failed: $2%s'
 '-':
   custom_string: '-'
-generator_bucket:
-  bucket_entries_ignored: $2Total bucket values add up to 1 or more. Blocks without
-    a spcified chance will be ignored
 category:
   command_category_claiming: Claiming
   command_category_settings: Protection
@@ -392,8 +420,6 @@ legacyconfig:
     are now using WorldEdit to handle schematics. You need to re-generate the schematics.
   legacy_config_conversion_failed: Failed to convert the legacy configuration file.
     See stack trace for information.
-left: {}
-rain: {}
 schematic:
   schematic_exportall_world: $1Invalid world. Use &3/plot sch exportall <area>
 error:
@@ -423,8 +449,197 @@ flags:
   flag_error_keep: Flag value must be a timestamp or a boolean
   flag_error_long: Flag value must be a whole number (large numbers allowed)
   flag_error_plotblocklist: Flag value must be a block list
-  flag_error_price: Flag value must be a positive number.
   flag_error_string: Flag value must be alphanumeric. Some special characters are
     allowed.
   flag_error_stringlist: Flag value must be a string list
   flag_error_weather: 'Flag must be a weather: ''rain'' or ''sun'''
+  flag_category_doubles: Decimal Flags
+  flag_category_music: Music Flags
+  flag_category_fly: Flight Flags
+  flag_description_entity_cap: Set to an integer value to limit the amount of entities
+    on the plot.
+  flag_description_explosion: Set to `true` to enable explosions in the plot, and
+    `false` to disable them.
+  flag_description_music: Set to a music disk ID (item name) to play the music disc
+    inside of the plot.
+  flag_description_flight: Set to `true` to enable flight within the plot when in
+    survival or adventure mode, set to `default` to use the gamemode default, and
+    `false` to disable flight entirely.
+  flag_description_untrusted: Set to `false` to disallow untrusted players from visiting
+    the plot.
+  flag_description_deny_exit: Set to `true` to disallow players from exiting the plot.
+  flag_description_chat: Set to `false` to prevent plot chat on the plot.
+  flag_description_description: Plot description. Supports '&' color codes.
+  flag_description_greeting: Message sent to players on plot entry. Supports '&' color
+    codes.
+  flag_description_farewell: Message sent to players when leaving the plot. Supports
+    '&' color codes.
+  flag_description_weather: Specifies the weather conditions inside of the plot.
+  flag_description_animal_attack: Set to `true` to allow animals to be attacked in
+    the plot.
+  flag_description_animal_cap: Set to an integer value to limit the amount of animals
+    on the plot.
+  flag_description_animal_interact: Set to `true` to allow animals to be interacted
+    with in the plot.
+  flag_description_block_burn: Set to `true` to allow blocks to burn within the plot.
+  flag_description_block_ignition: Set to `false` to prevent blocks from igniting
+    within the plot.
+  flag_description_break: Define a list of materials players should be able to break
+    even when they aren't added to the plot.
+  flag_description_device_interact: Set to `true` to allow devices to be interacted
+    with in the plot.
+  flag_description_disable_physics: Set to `true` to disable block physics in the
+    plot.
+  flag_description_drop_protection: Set to `true` to prevent dropped items from being
+    picked up by non-members of the plot.
+  flag_description_feed: Specify an interval in seconds and an optional amount by
+    which the players will be fed (amount is 1 by default).
+  flag_description_forcefield: Set to `true` to enable member forcefield in the plot.
+  flag_description_grass_grow: Set to `false` to prevent grass from growing within
+    the plot.
+  flag_description_hanging_break: Set to `true` to allow guests to break hanging objects
+    in the plot.
+  flag_description_hanging_place: Set to `true` to allow guests to hang objects in
+    the plot.
+  flag_description_heal: Specify an interval in seconds and an optional amount by
+    which the players will be healed (amount is 1 by default).
+  flag_description_hide_info: Set to `true` to hide plot information.
+  flag_description_hostile_attack: Set to `true` to enable players to attack hostile
+    mobs in the plot.
+  flag_description_hostile_cap: Set to an integer value to limit the amount of hostile
+    entities on the plot.
+  flag_description_hostile_interact: Set to `true` to allow players to interact with
+    hostile mobs in the plot.
+  flag_description_ice_form: Set to `true` to allow ice to form in the plot.
+  flag_description_ice_melt: Set to `false` to disable ice melting in the plot.
+  flag_description_instabreak: Set to `true` to allow blocks to be instantaneously
+    broken in survival mode.
+  flag_description_invincible: Set to `true` to prevent players from taking damage
+    inside of the plot.
+  flag_description_item_drop: Set to `false` to prevent items from being dropped inside
+    of the plot.
+  flag_description_kelp_grow: Set to `false` to prevent kelp from growing in the plot.
+  flag_description_liquid_flow: Set to `false` to disable liquids from flowing within
+    the plot.
+  flag_description_misc_break: Set to `true` to allow guests to break miscellaneous
+    items.
+  flag_description_misc_cap: Set to an integer value to limit the amount of miscellaneous
+    entities on the plot.
+  flag_description_misc_interact: Set to `true` to allow guests to interact with miscellaneous
+    items.
+  flag_description_misc_place: Set to `true` to allow guests to place miscellaneous
+    items.
+  flag_description_mob_break: Set to `true` to allow mobs to break blocks within the
+    plot.
+  flag_description_mob_cap: Set to an integer value to limit the amount of mobs on
+    the plot.
+  flag_description_mob_place: Set to `true` to allow mobs to place blocks within the
+    plot.
+  flag_description_mycel_grow: Set to `false` to prevent mycelium from growing in
+    the plot.
+  flag_description_notify_enter: Set to `true` to notify the plot owners when someone
+    enters the plot.
+  flag_description_notify_leave: Set to `true` to notify the plot owners when someone
+    leaves the plot.
+  flag_description_no_worldedit: Set to `true` to disable WorldEdit usage within the
+    plot.
+  flag_description_place: Define a list of materials players should be able to place
+    in the plot.
+  flag_description_player_interact: Set to `true` to allow guests to interact with
+    players in the plot.
+  flag_description_price: Set a price for a plot. Must be a positive decimal number.
+  flag_description_pve: Set to `true` to enable PVE inside the plot.
+  flag_description_pvp: Set to `true` to enable PVP inside the plot.
+  flag_description_redstone: Set to `false` to disable redstone in the plot.
+  flag_description_server_plot: Set to `true` to turn the plot into a server plot.
+    This is equivalent to setting the server as the plot owner.
+  flag_description_snow_form: Set to `true` to allow snow to form within the plot.
+  flag_description_snow_melt: Set to `true` to allow snow to melt within the plot.
+  flag_description_soil_dry: Set to `true` to allow soil to dry within the plot.
+  flag_description_coral_dry: Set to `true` to allow coral blocks to dry within the
+    plot.
+  flag_description_tamed_attack: Set to `true` to allow guests to attack tamed animals
+    in the plot.
+  flag_description_tamed_interact: Set to `true` to allow guests to interact with
+    tamed animals in the plot.
+  flag_description_time: Set the time in the plot to a fixed value.
+  flag_description_titles: 'Set to `false` to disable plot titles. Can be set to:
+    `none` (to inherit world settings), `true`, or `false`'
+  flag_description_use: Define a list of materials players should be able to interact
+    with in the plot.
+  flag_description_vehicle_break: Set to `true` to allow guests to break vehicles
+    in the plot.
+  flag_description_vehicle_cap: Set to an integer value to limit the amount of vehicles
+    on the plot.
+  flag_description_vehicle_place: Set to `true` to allow guests to place vehicles
+    in the plot.
+  flag_description_vehicle_use: Set to `true` to allow guests to use vehicles in the
+    plot.
+  flag_description_villager_interact: Set to `true` to allow guests to interact with
+    villagers in the plot.
+  flag_description_vine_grow: Set to `false` to prevent vines from growing within
+    the plot.
+  flag_description_deny_teleport: 'Deny a certain group from teleporting to the plot.
+    Available groups: members, nonmembers, trusted, nontrusted, nonowners'
+  flag_description_gamemode: Determines the gamemode in the plot.
+  flag_description_guest_gamemode: Determines the guest gamemode in the plot.
+  flag_description_blocked_cmds: A list of commands that are blocked in the plot.
+  flag_description_keep: 'Prevents the plot from expiring. Can be set to: true, false,
+    the number of milliseconds to keep the plot for or a timestamp (3w 2d 5h).'
+  flag_description_keep_inventory: Prevents players from dropping their items when
+    they die inside of the plot.
+  flag_description_prevent_creative_copy: Prevents people from copying item NBT data
+    in the plot unless they're added as members.
+  flag_error_invalid_block: The provided value is not a valid block or block category
+  flag_error_double: Flag value must be a decimal number.
+  flag_error_music: Flag value must be a valid music disc ID.
+plotareatype:
+  plot_area_type_normal: Standard plot generation
+  plot_area_type_augmented: Plot generation with vanilla terrain
+  plot_area_type_partial: Vanilla with clusters of plots
+players:
+  fetching_player: $1PlotSquared is attempting to find the specified player from your
+    argument(s). This may take a while.
+  fetching_players_timeout: $2The specified users did not exist in the cache and will
+    be fetched in the background. Please wait a couple of minutes.
+events:
+  event_denied: $1%s $2Cancelled by external plugin.
+backups:
+  backup_usage: '$1Usage: $2/plot backup save/list/load'
+  backup_impossible: '$2Backups are not enabled for this plot: %s'
+  backup_save_success: $1The backup was created successfully
+  backup_save_failed: '$2The backup could not be created: %s'
+  backup_load_success: $1The backup was restored successfully
+  backup_load_failure: '$2The backup could not be restored: %s'
+  backup_load_usage: '$1Usage: $2/plot backup load [#]'
+  backup_list_header: $1Available backups for plot $2%s
+  backup_list_entry: $3- $1#%s0 $2%s1
+  backup_list_failed: '$2Backup listing failed: %s'
+  backup_automatic_started: $1Backing up the plot...
+  backup_automatic_finished: $1The automatic backup process finished successfully!
+  backup_automatic_failure: '$2The automatic backup process failed. Your pending action
+    has been canceled. Reason: %s'
+preset:
+  preset_cannot_afford: $2You cannot afford that preset
+  preset_invalid: $2Could not generate a pattern from that preset
+  preset_lore_cost: '$2Cost: $1%cost%'
+  preset_lore_component: '$2Component: $1%component%'
+generic:
+  generic_other: other
+  generic_merged: merged
+  generic_unowned: unowned
+  generic_invalid_choice: invalid choice
+single:
+  single_area_missing_selection: $2Error! You need to select a square region
+  single_area_not_square: $2Error! Your selection needs to be a square
+  single_area_overlapping: $2Error! Your selection overlaps with an existing plot
+    area
+  single_area_needs_name: '$2Error! Please specify a plot name: /plot area single
+    <name>'
+  single_area_name_taken: $2Error! The plot name is already taken
+  single_area_failed_to_save: $2Error! Failed to save the area schematic
+  single_area_could_not_make_directories: $2Error! Failed to create the schematic
+    directory
+  single_area_created: $1The area was created successfully!
+plot-debug:
+  plot_debug: '$2Plot Debug ($1%plot%$2): %message%'

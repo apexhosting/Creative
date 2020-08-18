@@ -6,7 +6,7 @@ worlds:
       filling: granite
       floor: grass_block
       bedrock: true
-      biome: FOREST
+      biome: minecraft:forest
       auto_merge: false
       create_signs: true
     wall:
@@ -14,10 +14,12 @@ worlds:
       block_claimed: petrified_oak_slab
       filling: granite
       height: 64
+      place_top_block: true
     road:
       width: 7
       height: 64
       block: quartz_block
+      flags: {}
     misc_spawn_unowned: false
     home:
       nonmembers: side
@@ -26,6 +28,7 @@ worlds:
       specify_on_claim: false
       on_claim: false
       file: 'null'
+      schematics: []
     economy:
       prices:
         merge: 100
@@ -34,6 +37,7 @@ worlds:
       use: false
     chat:
       enabled: false
+      forced: false
     limits:
       max-members: 128
     world:
@@ -56,7 +60,7 @@ worlds:
       filling: dirt
       floor: grass_block
       bedrock: true
-      biome: FOREST
+      biome: minecraft:forest
       auto_merge: false
       create_signs: true
     wall:
@@ -64,10 +68,12 @@ worlds:
       block_claimed: nether_brick_slab
       filling: white_concrete
       height: 62
+      place_top_block: true
     road:
       width: 10
       height: 62
       block: white_concrete
+      flags: {}
     misc_spawn_unowned: false
     home:
       nonmembers: side
@@ -76,6 +82,7 @@ worlds:
       specify_on_claim: false
       on_claim: false
       file: 'null'
+      schematics: []
     economy:
       prices:
         merge: 100
@@ -84,6 +91,7 @@ worlds:
       use: false
     chat:
       enabled: false
+      forced: false
     limits:
       max-members: 128
     world:
@@ -99,4 +107,4 @@ worlds:
     natural_mob_spawning: false
     mob_spawner_spawning: false
     flags: {}
-configuration_version: post_flattening
+configuration_version: v5

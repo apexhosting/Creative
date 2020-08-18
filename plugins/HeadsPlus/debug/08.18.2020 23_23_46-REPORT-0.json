@@ -1,0 +1,17 @@
+[
+  {
+    "Special message": "Please don't put me on Santa's naughty list.",
+    "Exception details": {
+      "Stacktrace": [
+        "java.lang.NullPointerException\n\tat io.github.thatsmusic99.headsplus.HeadsPlus.onDisable(HeadsPlus.java:230)\n\tat org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:265)\n\tat io.github.thatsmusic99.headsplus.HeadsPlus.setupNMS(HeadsPlus.java:437)\n\tat io.github.thatsmusic99.headsplus.HeadsPlus.onEnable(HeadsPlus.java:89)\n\tat org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:263)\n\tat org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:351)\n\tat org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:480)\n\tat org.bukkit.craftbukkit.v1_16_R2.CraftServer.enablePlugin(CraftServer.java:492)\n\tat org.bukkit.craftbukkit.v1_16_R2.CraftServer.enablePlugins(CraftServer.java:406)\n\tat net.minecraft.server.v1_16_R2.MinecraftServer.loadWorld(MinecraftServer.java:435)\n\tat net.minecraft.server.v1_16_R2.DedicatedServer.init(DedicatedServer.java:219)\n\tat net.minecraft.server.v1_16_R2.MinecraftServer.w(MinecraftServer.java:808)\n\tat net.minecraft.server.v1_16_R2.MinecraftServer.lambda$0(MinecraftServer.java:164)\n\tat java.lang.Thread.run(Thread.java:748)\n"
+      ],
+      "Fired when": "Startup"
+    },
+    "Server version": "git-Spigot-379750e-9a9c223 (MC: 1.16.2)",
+    "HeadsPlus version": "6.7-SNAPSHOT-3",
+    "Plugin values": {
+      "Cached players": 0
+    },
+    "Date": "08/18/2020 23:23:46"
+  }
+]

@@ -1,4 +1,6 @@
 # HeadsPlus by Thatsmusic99 - Config wiki: https://github.com/Thatsmusic99/HeadsPlus/wiki/Configuring-config.yml
+locale: en_us
+smart-locale: false
 blacklist:
   default:
     enabled: true
@@ -34,6 +36,15 @@ plugin:
     title: '&8[&6{player}&8]'
     price: default
   mechanics:
+    suppress-gui-warnings: true
+    blocked-spawn-causes:
+    - SPAWNER_EGG
+    use-tellraw: false
+    masks:
+      check-interval: 60
+      reset-after-x-intervals: 20
+      effect-length: 12000
+    sellhead-ids-case-sensitive: true
     leaderboards:
       cache-boards: true
       cache-lifetime-seconds: 300
@@ -51,6 +62,10 @@ plugin:
       notify: true
     allow-looting-enchantment: true
     looting:
+      thresholds:
+        common: 100
+        uncommon: 20
+        rare: 5
       ignored-entities: []
       use-old-system: false
     stop-placement-of-sellable-heads: false
@@ -71,6 +86,7 @@ plugin:
         enabled: false
         level: 1
   perks:
+    ascii-art: true
     sell-heads: true
     drop-heads: true
     drops:
@@ -97,3 +113,8 @@ plugin:
       head.'
     - '&3The server owner screamed at &b{player} &3"OFF WITH HIS HEAD!"&3. &b{killer}
       &3finished the job.'
+    interact:
+      middle-click-head: true
+      click-head: true
+    xp:
+      allow-negative: false
