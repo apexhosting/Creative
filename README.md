@@ -1,5 +1,5 @@
 # Creative
-![alt text](https://apexminecrafthosting.com/wp-content/uploads/2019/09/Creative-gametype.png)
+![alt text](https://apex-misc.s3.amazonaws.com/Images/Creative+Thumbnail.png)
 The creative game mode has obviously been around for ages, since Beta 1.8 when Mojang FINALLY gave in and gave Minecraft players a way to infinitely create without mods or hacks of any kind. After this creative servers became commonplace and players flocked to them as creative outlets for anything they could think of to build. Creative is a game mode that allows you to build infinite structures with access to every block in the game immediately. This makes for some amazing projects and machines being built.
 
 https://apexminecrafthosting.com/creative-server/
