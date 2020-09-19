@@ -2912,9 +2912,16 @@ heads:
     price: default
     section: mobs
     interact-name: Zombified Piglin
+  piglin_brute:
+    encode: true
+    displayname: '&8❰ &cPiglin Brute &8❱'
+    texture: 3e300e9027349c4907497438bac29e3a4c87a848c50b34c21242727b57f4e1cf
+    price: default
+    section: mobs
+    interact-name: Piglin Brute
 options:
   update-heads: true
-  version: 3.3
+  version: 3.4
   default-price: 10.0
   price-per-world:
     example-one: 15.0
