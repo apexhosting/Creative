@@ -49,7 +49,7 @@ enabled-components:
   # Actively purge invalid database entries
   database-purger: false
   # Delete plots when a player is banned.
-  # Note: This only works with the /minecraft:ban command. Any punishment plugin like LiteBans is not supported.
+  # Note: This only works with the /minecraft:ban command. Any punishment plugin is not supported.
   ban-deleter: false
   # Allows PlaceholderAPI placeholders to be used in captions, flags, etc.
   external-placeholders: true
@@ -73,6 +73,8 @@ enabled-components:
   - "plotme"
   - "plotz"
   - "ap"
+  # Whether PlotSquared should hook into MvDWPlaceholderAPI or not
+  use-mvdwapi: true
 
 # Settings related to tab completion
 tab-completions:
