@@ -1,0 +1,6 @@
+config:
+  WorldGuard:
+    enabled: true
+  PlotSquared:
+    enabled: true
+    RegionClearEvent: true

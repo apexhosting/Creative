@@ -70,9 +70,17 @@ textmenus:
     description: Leírás
     permission: Permission
     further-usages: További felhasználások
-version: 1.3
+version: 1.5
 prefix: '&cHeadsPlus &8» &7'
 commands:
+  debug:
+    verbose:
+      enabled: '{header} Engedélyezte az &c{event} &7esemény és az &c{args} &7argumentumok
+        hibakereső részletezését!'
+      disabled: '{header} Letiltotta a hibakeresési részleteket!'
+  restore:
+    restored-head: '{header} Visszaállítva {head}!'
+    invalid-head: '{header} A {head} nem érvényes azonosító!'
   locale:
     invalid-lang: '{header} Ez nem érvényes nyelv! Elérhető nyelvek: &c{languages}'
     changed-locale: '{header} Helló! Az Ön nyelve most &cmagyarra &7van állítva &c(MA)'
@@ -198,6 +206,7 @@ commands:
     reset-xp: '{header} Állítsa vissza a (z) &c{player} &7XP operációs rendszerét!'
 descriptions:
   hp:
+    restore: Visszaállítja vagy megjavítja a plugin által biztosított fejet.
     blacklist: Váltja a feketelistát.
     blacklistadd: Hozzáad egy fejet a feketelistához.
     blacklistdel: Eltávolítja a fejet a feketelistáról.

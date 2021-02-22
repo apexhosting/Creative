@@ -70,9 +70,17 @@ textmenus:
     description: Beschreibung
     permission: Genehmigung
     further-usages: Weitere Verwendung
-version: 1.3
+version: 1.5
 prefix: '&cHeadsPlus &8» &7'
 commands:
+  debug:
+    verbose:
+      enabled: '{header} Das ausführliche Debuggen für Ereignis &c{event} &7und Argumente
+        &c{args} &7wurde aktiviert!'
+      disabled: '{header} Deaktiviert das ausführliche Debuggen!'
+  restore:
+    restored-head: '{header} {head} erfolgreich wiederhergestellter!'
+    invalid-head: '{header} {head} ist keine gültige ID!'
   errors:
     not-a-player: '{header} Sie müssen ein Spieler sein, um diesen Befehl / Unterbefehl
       auszuführen!'
@@ -207,6 +215,8 @@ commands:
     reset-xp: '{header} Setze die XP von &c{player} &7zurück!'
 descriptions:
   hp:
+    restore: Stellt einen Kopf wieder her oder repariert ihn, der bereits vom Plugin
+      bereitgestellt wurde.
     blacklist: Aktiviert und deaktiviert die Blacklist.
     blacklistadd: Fügt einen Kopf zur Blacklist hinzu.
     blacklistdel: Entfernt einen Kopf aus der Blacklist.

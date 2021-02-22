@@ -1,6 +1,7 @@
 # HeadsPlus by Thatsmusic99 - due to the way Bukkit works, this config can only be reloaded on restart.
 # Instructions for setting up can be found at: https://github.com/Thatsmusic99/HeadsPlus/wiki
 base-item:
+  use-base-item: true
   price: 10.0
   display-name: '{type} Head'
   lore:

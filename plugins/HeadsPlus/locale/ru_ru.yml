@@ -70,9 +70,17 @@ textmenus:
     description: Описание
     permission: разрешение
     further-usages: Дальнейшее использование
-version: 1.3
+version: 1.5
 prefix: '&cHeadsPlus &8» &7'
 commands:
+  debug:
+    verbose:
+      enabled: '{header} Включена подробная отладка для события &c{event} &7и аргументов
+        &c{args}&7!'
+      disabled: '{header} Отключена подробная отладка!'
+  restore:
+    restored-head: '{header} Восстановил {head}!'
+    invalid-head: '{header} {head} не является действительным идентификатором!'
   locale:
     invalid-lang: '{header} Это не правильный язык! Доступные языки: &c{languages}'
     changed-locale: '{header} Здравствуйте! Ваш язык теперь установлен на &cрусский
@@ -200,6 +208,8 @@ commands:
     reset-xp: '{header} Сбросить &c{player} &7ХР!'
 descriptions:
   hp:
+    restore: Восстанавливает или ремонтирует голову, которая уже была предоставлена
+      плагином.
     blacklist: Включает черный список.
     blacklistadd: Добавляет голову в черный список.
     blacklistdel: Удаляет голову из черного списка.

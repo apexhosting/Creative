@@ -536,8 +536,6 @@ uuid:
   service-bukkit: true
   # Whether the EssentialsX service is enabled
   service-essentialsx: true
-  # Whether the BungeePerms service is enabled
-  service-bungee-perms: true
 
 # Chunk processor related settings
 # See https://wiki.intellectualsites.com/en/plotsquared/optimization/chunk-processor for more information.
