@@ -5,7 +5,7 @@ The creative game mode has obviously been around for ages, since Beta 1.8 when M
 https://apexminecrafthosting.com/creative-server/
 
 ## Plugin List
-[Armor Stand Tools] (https://www.spigotmc.org/resources/armor-stand-tools.2237/)
+[Armor Stand Tools](https://www.spigotmc.org/resources/armor-stand-tools.2237/)
 [Core Protect](https://www.spigotmc.org/resources/coreprotect.8631/)
 [Dice Furniture](https://www.spigotmc.org/resources/dicefurniture-plugin-m%C3%B6bel-plugin.6006/)
 [EssentialsX](https://www.spigotmc.org/resources/essentialsx.9089/)
@@ -13,6 +13,7 @@ https://apexminecrafthosting.com/creative-server/
 [Heads Plus](https://www.spigotmc.org/resources/headsplus-1-8-x-1-16-x.40265/)
 [Holographic Displays](https://dev.bukkit.org/projects/holographic-displays)
 [Multiverse Core](https://dev.bukkit.org/projects/multiverse-core)
+[Name Tag Edit](https://www.spigotmc.org/resources/nametagedit.3836/)
 [Plot Squared](https://www.spigotmc.org/resources/plotsquared-v5.77506/)
 [Protection Lib](https://www.spigotmc.org/resources/furniturelibary-protectionlib.9368/)
 [PermissionsEx](https://github.com/PEXPlugins/PermissionsEx)
