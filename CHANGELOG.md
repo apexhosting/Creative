@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.5]
+
+### Changed
+- Added the Via suite of plugins for version support.
+
 ## [2.4]
 
 ### Changed
@@ -74,6 +79,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Initial commit of pack to Github for version control
 
+[2.5]: https://github.com/apexhosting/Creative/releases/tag/2.5
 [2.4]: https://github.com/apexhosting/Creative/releases/tag/2.4
 [2.3]: https://github.com/apexhosting/Creative/releases/tag/2.3
 [2.2.1]: https://github.com/apexhosting/Creative/releases/tag/2.2.1
