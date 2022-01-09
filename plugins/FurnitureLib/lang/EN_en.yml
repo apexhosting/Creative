@@ -1,4 +1,5 @@
 message:
+  FurnitureToggleCantChange: '&cYou cant change the Furniture Visibility'
   FurnitureOnThisPlace: '&aThere is already a piece of furniture at this position.'
   NotEnoughSpace: '&aThere is not enough space to place this object.'
   PlayerNotOnline: '&cThe player #PLAYER# is not online.'

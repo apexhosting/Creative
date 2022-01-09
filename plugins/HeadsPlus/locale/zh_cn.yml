@@ -1,7 +1,7 @@
 # HeadsPlus by Thatsmusic99 - Chinese/CN (Bieck_Smile)
 # 请勿更改版本!在插件内部用于添加新消息.
 language: Chinese (CN)
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 inventory:
   icon:
@@ -130,6 +130,7 @@ commands:
     challenge-completed: '&6已完成!'
     reward-string: '{header} 奖励: &c{reward}\n{header} XP: &c{xp}'
   head:
+    restricted-head: '{header} 你不能用那个头！'
     alpha-names: '{header} 此命令仅处理字母数字名称!'
     blacklist-head: '{header} 此头颅已列入黑名单，无法使用!'
     full-inv: '{header} 您的库存已满!'
@@ -228,6 +229,8 @@ descriptions:
   myhead: 产生在你的头颅上.
   sellhead: 出售您手中的头，使用数字参数出售特定的 编号，出售特定头颅头部的实体名称，以及所有出售每个头颅的实体.
 event:
+  cannot-craft-heads: '{header} 你不能制作人头!'
+  cannot-craft-heads-here: '{header} 你不能在这里制作人头!'
   block-place-denied: '{header} 您不能放置可出售的头颅!'
   head-interact-message: '{header} 是 &c{name}&7的头颅!'
   head-mhf-interact-message: '{header} 是 &c{name}&7的头颅!'

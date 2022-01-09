@@ -9,6 +9,7 @@ worlds:
       biome: minecraft:forest
       auto_merge: false
       create_signs: true
+      sign_material: OAK_WALL_SIGN
     wall:
       block: sandstone_slab
       block_claimed: petrified_oak_slab
@@ -63,6 +64,7 @@ worlds:
       biome: minecraft:forest
       auto_merge: false
       create_signs: true
+      sign_material: OAK_WALL_SIGN
     wall:
       block: sandstone_slab
       block_claimed: nether_brick_slab

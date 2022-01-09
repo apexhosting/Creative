@@ -70,7 +70,7 @@ textmenus:
     description: Descriere
     permission: Permisiune
     further-usages: Utilizari ulterioare
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 commands:
   debug:
@@ -141,6 +141,7 @@ commands:
     challenge-completed: '&6Terminat!'
     reward-string: '{header} Recompensa: &c{reward}\n{header} XP: &c{xp}'
   head:
+    restricted-head: '{header} Nu poți folosi acel cap!'
     alpha-names: '{header} Aceasta comanda suporta doar nume alfanumerice!'
     blacklist-head: '{header} Acest cap este interzis si nu poate fi folosit!'
     full-inv: '{header} Inventarul tau este plin!'
@@ -245,6 +246,8 @@ descriptions:
     un anumit numar de capete, numele entitatii pentru a vinde capul unui anumit animal,
     si valoarea ''all'' pentru a vinde fiecare cap.
 event:
+  cannot-craft-heads: '{header} Nu poți crea capete!'
+  cannot-craft-heads-here: '{header} Nu poți crea capete aici!'
   block-place-denied: '{header} Nu poti sa-ti asezi capete!'
   head-interact-message: '{header} Acesta este capul lui &c{name}&7!'
   head-mhf-interact-message: '{header} Acesta este un cap de &c{name}&7!'

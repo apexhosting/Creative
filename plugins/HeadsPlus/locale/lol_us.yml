@@ -70,7 +70,7 @@ textmenus:
     description: uhh what
     permission: permy
     further-usages: how 2 but worse
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 commands:
   debug:
@@ -134,6 +134,7 @@ commands:
     challenge-completed: '&6dun'
     reward-string: '{header} Kitty treetz: &c{reward}\n{header} ex-pee: &c{xp}'
   head:
+    restricted-head: '{header} Dis hed iz nawt aloud!'
     alpha-names: '{header} Y U speekz gibberish?'
     blacklist-head: '{header} Dis hed is banne sah two bad!!'
     full-inv: '{header} Ur nawt faht enuf 2 get anofa hed!'
@@ -232,6 +233,8 @@ descriptions:
   myhead: Givs u ur hed
   sellhead: Sells a hed in ur hands or wif teh givn cmd stuff
 event:
+  cannot-craft-heads: '{header} no crafty, only hugs'
+  cannot-craft-heads-here: '{header} no crafty here, only hugs'
   block-place-denied: '{header} Nu dun do dat'
   head-interact-message: '{header} Dat iz &c{player}&7''s hed!'
   head-mhf-interact-message: '{header} Dat iz a wild &c{player}&7''s hed!'

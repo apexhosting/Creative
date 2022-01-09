@@ -70,7 +70,7 @@ textmenus:
     description: Beschreibung
     permission: Genehmigung
     further-usages: Weitere Verwendung
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 commands:
   debug:
@@ -140,6 +140,7 @@ commands:
     challenge-completed: '&6Abgeschlossen!'
     reward-string: '{header} Belohnung: &c{reward}\n{header} XP: &c{xp}'
   head:
+    restricted-head: '{header} Du kannst diesen Kopf hier nicht verwenden!'
     alpha-names: '{header} Dieses Kommando verarbeitet nur alphanummerische Namen!'
     blacklist-head: '{header} Dieser Kopf ist auf der Blacklist und kann daher nicht
       verwendet werden!'
@@ -251,6 +252,8 @@ descriptions:
   myhead: Erzeugt einen Kopf von deinem Spieler.
   sellhead: Verkauft Köpfe, entweder von Wesen, Menge oder in deiner Hand.
 event:
+  cannot-craft-heads: '{header} Sie können keine Köpfe herstellen!'
+  cannot-craft-heads-here: '{header} Hier kann man keine Köpfe herstellen!'
   block-place-denied: '{header} Du kannst keine verkaufbaren Köpfe platzieren!'
   head-interact-message: '{header} Das ist &c{name}&7''s Kopf!'
   head-mhf-interact-message: '{header} Das ist der &c{name} &7Kopf!'

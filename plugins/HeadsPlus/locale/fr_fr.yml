@@ -70,7 +70,7 @@ textmenus:
     description: Description
     permission: Autorisation
     further-usages: Autres Usages
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 commands:
   debug:
@@ -147,6 +147,7 @@ commands:
     challenge-completed: '&6Terminé!'
     reward-string: '{header} Récompense: &c{reward}\n{header} XP: &c{xp}'
   head:
+    restricted-head: '{header} Vous ne pouvez pas utiliser cette tête!'
     alpha-names: '{header} Cette commande ne gère que les noms alphanumériques!'
     blacklist-head: '{header} Cette tête est sur la blacklist et ne peut pas être
       utilisée!'
@@ -255,6 +256,8 @@ descriptions:
     vendre un nombre spécifique, nom d'entité vendre une entité spécifique, et "all"
     pour vendre tous les têtes.
 event:
+  cannot-craft-heads: '{header} Vous ne pouvez pas fabriquer des têtes!'
+  cannot-craft-heads-here: '{header} Vous ne pouvez pas fabriquer des têtes ici!'
   block-place-denied: '{header} Vous ne pouvez pas placer de têtes vendables!'
   head-interact-message: '{header} C''est une tête d''&c{name}&7!'
   head-mhf-interact-message: '{header} C''est une tête d''&c{name}&7!'

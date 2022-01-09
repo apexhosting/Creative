@@ -1,4 +1,3 @@
-version: 0.3
 levels:
   grass:
     display-name: '&2&lGrass'
@@ -396,3 +395,4 @@ levels:
       reward-value: 300
       item-amount: 0
       command-sender: player
+version: 0.3

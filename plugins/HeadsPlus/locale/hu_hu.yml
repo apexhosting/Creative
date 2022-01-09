@@ -70,7 +70,7 @@ textmenus:
     description: Leírás
     permission: Permission
     further-usages: További felhasználások
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 commands:
   debug:
@@ -139,6 +139,7 @@ commands:
     challenge-completed: '&6Befejezték!'
     reward-string: '{header} Jutalom: &c{reward}\n{header} XP: &c{xp}'
   head:
+    restricted-head: '{header} Nem használhatod azt a fejet!'
     alpha-names: '{header} Ez a parancs csak az alfanumerikus neveket kezeli!'
     blacklist-head: '{header} Ez a fej feketelistán szerepel, és nem használható!'
     full-inv: '{header} Az eszköztárad tele van!'
@@ -243,6 +244,8 @@ descriptions:
     egy adott számot, egy entitás nevét, hogy eladja egy adott mob fejét, és mindent
     eladni minden fejét.
 event:
+  cannot-craft-heads: '{header} Nem készíthet fejeket!'
+  cannot-craft-heads-here: '{header} Itt nem lehet fejeket készíteni!'
   block-place-denied: '{header} Nem teheted le a fejeket!'
   head-interact-message: '{header} Azaz &c{player}&7 feje!'
   head-mhf-interact-message: '{header} Az egy &c{name}&7 feje!'

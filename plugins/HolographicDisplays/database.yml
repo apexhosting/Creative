@@ -1,5 +1,4 @@
 spawninfo:
-  location: Plots, -46.500, 143.000, -44.500
   lines:
   - '&b&oWelcome to &f&oApex Hosting''s'
   - '&6&oCreative Gametype!'
@@ -10,15 +9,32 @@ spawninfo:
   - '&7&oyour own creativity!'
   - '&8&m---------'
   - '&7&o(/hd edit spawninfo)'
+  position:
+    world: Plots
+    x: -46.5
+    y: 143.0
+    z: -44.5
 worldedit:
-  location: Plots, -53.500, 142.500, -59.500
   lines:
   - '&6&lWorldEdit Info'
+  position:
+    world: Plots
+    x: -53.5
+    y: 142.5
+    z: -59.5
 plotclaim:
-  location: Plots, -39.500, 142.500, -59.500
   lines:
   - '&6&lPlotClaim Info'
+  position:
+    world: Plots
+    x: -39.5
+    y: 142.5
+    z: -59.5
 ranks:
-  location: Plots, -46.500, 142.500, -35.500
   lines:
   - '&b&lServer Ranks'
+  position:
+    world: Plots
+    x: -46.5
+    y: 142.5
+    z: -35.5

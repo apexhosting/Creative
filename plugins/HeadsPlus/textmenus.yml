@@ -54,24 +54,6 @@ profile:
   - '{4}Total heads crafted: {2}{crafting-counter}'
   - '{4}Current level: {2}{level}'
   - '{4}XP until next level: {2}{next-level}'
-blacklist:
-  default:
-    header: '{1}============ {2}Blacklist: {3}{page}/{pages} {1}============'
-    for-each-line: '{4}{name}'
-    lines-per-page: 8
-  world:
-    header: '{1}============ {2}World Blacklist: {3}{page}/{pages} {1}============'
-    for-each-line: '{4}{name}'
-    lines-per-page: 8
-whitelist:
-  default:
-    header: '{1}============ {2}Whitelist: {3}{page}/{pages} {1}============'
-    for-each-line: '{4}{name}'
-    lines-per-page: 8
-  world:
-    header: '{1}============ {2}World Whitelist: {3}{page}/{pages} {1}============'
-    for-each-line: '{4}{name}'
-    lines-per-page: 8
 leaderboard:
   header: '{1}======= {2}HeadsPlus Leaderboards: {section} {3}{page}/{pages} {1}======='
   for-each-line: '{4}{pos}. {2}{name} {3}- {2}{score}'

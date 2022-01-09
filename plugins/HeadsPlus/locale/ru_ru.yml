@@ -70,7 +70,7 @@ textmenus:
     description: Описание
     permission: разрешение
     further-usages: Дальнейшее использование
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 commands:
   debug:
@@ -140,6 +140,7 @@ commands:
     challenge-completed: '&6Завершено!'
     reward-string: '{header} Награда: &c{reward}\n{header} XP: &c{xp}'
   head:
+    restricted-head: '{header} Ты не можешь использовать эту голову!'
     alpha-names: '{header} Эта команда обрабатывает только буквенно-цифровые имена!'
     blacklist-head: '{header} Эта голова занесена в черный список и не может быть
       использована!'
@@ -246,6 +247,8 @@ descriptions:
     определенное число, имя сущности, чтобы продать голову конкретного моба, и ALL,
     чтобы продать все головы.
 event:
+  cannot-craft-heads: '{header} Вы не можете создавать головы!'
+  cannot-craft-heads-here: '{header} Здесь нельзя лепить головы!'
   block-place-denied: '{header} Нельзя ставить продаваемые головы!'
   head-interact-message: '{header} Эта голова &c{name}&7 !'
   head-mhf-interact-message: '{header} Эта голова &c{name}&7 !'

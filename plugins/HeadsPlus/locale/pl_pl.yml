@@ -70,7 +70,7 @@ textmenus:
     description: Opis
     permission: Uprawnienie
     further-usages: Dalsze zastosowania
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 commands:
   debug:
@@ -140,6 +140,7 @@ commands:
     challenge-completed: '&6Ukończone!'
     reward-string: '{header} Nagroda: &c{reward}\n{header} Dośw.: &c{xp}'
   head:
+    restricted-head: '{header} Nie możesz użyć tej głowy!'
     alpha-names: '{header} Ta komenda używa tylko znaków alfanumerycznych!'
     blacklist-head: '{header} Ta głowa znajduje się na czarnej liście i nie można
       jej używać!'
@@ -248,6 +249,8 @@ descriptions:
     sprzedania konkretnej ilości, nazwy moba, aby sprzedać konkretne głowy i all,
     aby sprzedać wszystkie głowy.
 event:
+  cannot-craft-heads: '{header} Nie możesz tworzyć głów!'
+  cannot-craft-heads-here: '{header} Nie możesz tu tworzyć głów!'
   block-place-denied: '{header} Nie możesz postawić głów, które da się sprzedać!'
   head-interact-message: '{header} To jest głowa użytkownika &c{name}&7!'
   head-mhf-interact-message: '{header} To jest głowa użytkownika &c{name}&7!'

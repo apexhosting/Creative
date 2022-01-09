@@ -1,7 +1,7 @@
 # HeadsPlus by Thatsmusic99 - Nederlands (Tepoloco)
 # Wijzig de versie niet! Dit wordt intern gebruikt in de plug-in om nieuwe berichten toe te voegen.
 language: Nederlands (NL)
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 inventory:
   icon:
@@ -141,6 +141,7 @@ commands:
     challenge-completed: '&6Voltooid!'
     reward-string: '{header} Beloning: &c{reward}\n{header} XP: &c{xp}'
   head:
+    restricted-head: '{header} Je kunt dat hoofd niet gebruiken!'
     alpha-names: '{header} Deze opdracht behandelt alleen alfanumerieke namen!'
     blacklist-head: '{header} Dit hoofd staat op de blacklist en kan niet worden gebruikt!'
     full-inv: '{header} Je inventaris is vol!'
@@ -246,6 +247,8 @@ descriptions:
     te verkopen     nummer, entiteitsnaam om het hoofd van een bepaalde maffia te
     verkopen, en alles om elk hoofd te verkopen.
 event:
+  cannot-craft-heads: '{header} Je kunt geen hoofden maken!'
+  cannot-craft-heads-here: '{header} Je kunt hier geen hoofden maken!'
   block-place-denied: '{header} Je kunt geen verkoopbare koppen plaatsen!'
   head-interact-message: '{header} Dat is het hoofd van &c{name}&7!'
   head-mhf-interact-message: '{header} Dat is een &c{name}&7''s hoofd!'

@@ -70,7 +70,7 @@ textmenus:
     description: Descripción
     permission: Permiso
     further-usages: Usos adicionales
-version: 1.5
+version: 1.7
 prefix: '&cHeadsPlus &8» &7'
 commands:
   debug:
@@ -143,6 +143,7 @@ commands:
     challenge-completed: '&6¡Terminado!'
     reward-string: '{header} Recompensa: &c{reward}\n{header} XP: &c{xp}'
   head:
+    restricted-head: '{header} Du kannst diesen Kopf hier nicht verwenden!'
     alpha-names: '{header} Ese comando solo maneja nombres numéricos.'
     blacklist-head: '{header} Esa cabeza está bloqueada y no puede ser usada.'
     full-inv: '{header} ¡Tu inventario está lleno!'
@@ -249,6 +250,8 @@ descriptions:
   sellhead: Vende la cabeza en tu mano, utiliza el parámetro numerico para la cantidad,
     el nombre de la entidad para un mob específico o All para venderlas todas.
 event:
+  cannot-craft-heads: '{header} ¡No puedes fabricar cabezas!'
+  cannot-craft-heads-here: '{header} ¡No puedes fabricar cabezas aquí!'
   block-place-denied: '{header} No puedes colocar cabezas vendibles.'
   head-interact-message: '{header} ¡Cabeza de &c{name}&7!'
   head-mhf-interact-message: '{header} ¡Cabeza de &c{name}&7!'

@@ -1,71 +1,9 @@
-version: 0.1
 icons:
-  sellable-head:
-    data-value: 0
-    lore: []
-  pinned-challenges:
-    material: DIAMOND
-    data-value: 0
-    display-name: '{msg_inventory.icon.pinned-challenges}'
-    lore: []
-  challenges-section:
-    data-value: 0
-    material: LIME_TERRACOTTA
-    display-name: '{section-name}'
-    lore:
-    - '{section-lore}'
-    - '&7{challenges} challenges'
-    replacement: glass
-  menu:
-    data-value: 0
-    material: NETHER_STAR
-    display-name: '&a&lMain Menu'
-    lore: []
-    replacement: glass
-  start:
-    data-value: 0
-    material: ARROW
-    display-name: '&a&lFirst Page'
-    lore: []
-    replacement: glass
-  last:
-    data-value: 0
-    material: ARROW
-    display-name: '&a&lLast Page'
-    lore: []
-    replacement: glass
-  back_2:
-    data-value: 0
-    material: ARROW
-    display-name: '&a&lBack 2'
-    lore: []
-    replacement: glass
-  back_3:
-    data-value: 0
-    material: ARROW
-    display-name: '&a&lBack 3'
-    lore: []
-    replacement: glass
-  next_2:
-    data-value: 0
-    material: ARROW
-    display-name: '&a&lNext 2'
-    lore: []
-    replacement: glass
-  next_3:
-    data-value: 0
-    material: ARROW
-    display-name: '&a&lNext 3'
-    lore: []
-    replacement: glass
-  back:
-    data-value: 0
-    material: ARROW
-    display-name: '&a&lBack'
-    lore: []
-    replacement: glass
+  'null':
+    material: null
+    display-name: null
+    lore: null
   challenge:
-    data-value: 0
     material: RED_TERRACOTTA
     display-name: '{challenge-name}'
     lore:
@@ -73,53 +11,47 @@ icons:
     - '&6Reward: &a{challenge-reward}'
     - '&6XP: &a{challenge-xp}'
     - '{completed}'
-    replacement: air
-    complete-material: LIME_TERRACOTTA
-  close:
-    data-value: 0
-    material: BARRIER
-    display-name: '&c&lClose Menu'
-    lore: []
-    replacement: glass
-  favourites:
-    data-value: 0
-    material: DIAMOND
-    display-name: '&b&lFavourites'
-    lore: []
-    replacement: glass
-  glass:
-    data-value: 8
-    material: LIGHT_GRAY_STAINED_GLASS_PANE
-    display-name: '&c'
-    lore: []
-    replacement: glass
+  challenges-section:
+    material: LIME_TERRACOTTA
+    display-name: '{section-name}'
+    lore:
+    - '{section-lore}'
+    - '&7{challenges} challenges'
   head:
-    data-value: 0
     material: PLAYER_HEAD
     display-name: '{head-name}'
     lore:
     - '&6[&ePrice&6] &a{price}'
     - '{favourite}'
-    replacement: air
-  main_menu:
-    material: ARROW
+  headsection:
+    material: PLAYER_HEAD
+    display-name: '{head-name}'
+    lore: []
+  sellable-head:
+    material: null
+    display-name: '{head-name}'
+    lore: []
+  glass:
+    material: LIGHT_GRAY_STAINED_GLASS_PANE
+    display-name: '&c'
+    lore: []
+  close:
+    material: BARRIER
+    display-name: '&c&lClose Menu'
+    lore: []
+  air:
+    material: AIR
+    display-name: ''
+    lore: []
+  menu:
+    material: NETHER_STAR
     display-name: '&a&lMain Menu'
     lore: []
-    replacement: glass
-  next:
-    data-value: 0
-    material: ARROW
-    display-name: '&a&lNext'
+  favourites:
+    material: DIAMOND
+    display-name: '&b&lFavourites'
     lore: []
-    replacement: glass
-  search:
-    data-value: 0
-    material: NAME_TAG
-    display-name: '&6[&e&lSearch Heads&6]'
-    lore: []
-    replacement: glass
   stats:
-    data-value: 0
     material: PAPER
     display-name: '&6&l[&e&lStats&6&l]'
     lore:
@@ -128,69 +60,54 @@ icons:
     - '§aTotal sections: {sections}'
     - '§aCurrent balance: {balance}'
     - '§aCurrent section: {section}'
-    replacement: glass
-  air:
+  search:
+    material: NAME_TAG
+    display-name: '&6[&e&lSearch Heads&6]'
+    lore: []
+  pinned-challenges:
+    material: DIAMOND
+    display-name: '{msg_inventory.icon.pinned-challenges}'
+    lore: []
+  next:
+    material: ARROW
     data-value: 0
-    material: AIR
-    display-name: ''
+    display-name: '&a&lNext'
     lore: []
-    replacement: glass
-  headsection:
+  next_2:
+    material: ARROW
     data-value: 0
-    material: PLAYER_HEAD
-    display-name: '{head-name}'
+    display-name: '&a&lNext 2'
     lore: []
-    replacement: air
-  challenges-easy:
-    material: GREEN_TERRACOTTA
-    display-name: '&8[&a&lEasy&8]'
+  next_3:
+    material: ARROW
+    data-value: 0
+    display-name: '&a&lNext 3'
     lore: []
-    replacement: glass
-  challenges-easy-medium:
-    material: LIME_TERRACOTTA
-    display-name: '&8[&a&lEasy&8-&6&lMedium&8]'
+  back:
+    material: ARROW
+    data-value: 0
+    display-name: '&a&lBack'
     lore: []
-    replacement: glass
-  challenges-medium:
-    material: YELLOW_TERRACOTTA
-    display-name: '&8[&6&lMedium&8]'
+  back_2:
+    material: ARROW
+    data-value: 0
+    display-name: '&a&lBack 2'
     lore: []
-    replacement: glass
-  challenges-medium-hard:
-    material: ORANGE_TERRACOTTA
-    display-name: '&8[&6&lMedium&8-&c&lHard&8]'
+  back_3:
+    material: ARROW
+    data-value: 0
+    display-name: '&a&lBack 3'
     lore: []
-    replacement: glass
-  challenges-hard:
-    material: RED_TERRACOTTA
-    display-name: '&8[&c&lHard&8]'
+  start:
+    material: ARROW
+    data-value: 0
+    display-name: '&a&lFirst Page'
     lore: []
-    replacement: glass
-  challenges-tedious:
-    material: BLUE_TERRACOTTA
-    display-name: '&8[&c&lTedious&8]'
+  last:
+    material: ARROW
+    data-value: 0
+    display-name: '&a&lLast Page'
     lore: []
-    replacement: glass
-  challenges-tedious-painful:
-    material: PURPLE_TERRACOTTA
-    display-name: '&8[&c&lTedious&8-&5&lPainful&8]'
-    lore: []
-    replacement: glass
-  painful:
-    material: MAGENTA_TERRACOTTA
-    display-name: '&8[&5&lPainful&8]'
-    lore: []
-    replacement: glass
-  painful-deadly:
-    material: PINK_TERRACOTTA
-    display-name: '&8[&5Painful&8-&4Deadly&8]'
-    lore: []
-    replacement: glass
-  deadly:
-    material: RED_TERRACOTTA
-    display-name: '&8[&4Deadly&8]'
-    lore: []
-    replacement: glass
 inventories:
   challenges-menu:
     title: 'HeadsPlus Challenges: Menu'
@@ -212,15 +129,16 @@ inventories:
     title: 'HeadsPlus Head Selector: {page}/{pages}'
     icons: FGGGSGGGKGCCCCCCCGGCCCCCCCGGCCCCCCCGGCCCCCCCGMGGBXNGGG
     size: 54
+  sellhead-category:
+    title: 'HeadsPlus Sellhead: {page}/{pages}'
+    icons: GGGGGGGGGGCCCCCCCGGCCCCCCCGGCCCCCCCGGCCCCCCCG<{[BMN]}>
+    size: 54
   sellheadmenu:
     title: HeadsPlus Sellhead menu
     icons: GGGGGGGGGGCCCCCCCGGCCCCCCCGGCCCCCCCGGCCCCCCCGGGGBXNGGG
     size: 54
-  sellhead-category:
-    title: 'HeadsPlus Sellhead: {page}/{pages}'
-    size: 54
-    icons: GGGGGGGGGGCCCCCCCGGCCCCCCCGGCCCCCCCGGCCCCCCCG<{[BMN]}>
   pinned-challenges:
     title: 'HeadsPlus Challenges: Pinned'
-    size: 54
     icons: PGGGGGGGGGCCCCCCCGGCCCCCCCGGCCCCCCCGGCCCCCCCG<{[BMN]}>
+    size: 54
+version: 0.1

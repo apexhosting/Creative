@@ -3,11 +3,47 @@ platform: "Bukkit"
 # Show additional information in console. It helps us at IntellectualSites to find out more about an issue.
 # Leave it off if you don't need it, it can spam your console.
 debug: true
-# The big text that appears when you enter a plot.
-# For a single plot set `/plot flag set titles false` to disable it.
-# For just you run `/plot toggle titles` to disable it.
-# For all plots: Add `titles: false` in the worlds.yml flags block to disable it.
-titles: true
+
+# Redstone related settings
+redstone:
+  # Disable redstone in unoccupied plots
+  disable-unoccupied: false
+  # Disable redstone when all owners/trusted/members are offline
+  disable-offline: false
+  # Detect and cancel invalid pistons on the edge of plots (e.g. placed with WorldEdit)
+  detect-invalid-edge-pistons: false
+
+# UUID settings
+# DO NOT EDIT them unless you know what you are doing.
+uuid:
+  # Force using offline UUIDs (it usually detects the right mode)
+  offline: false
+  # Force using lowercase UUIDs
+  force-lowercase: false
+  # How many UUIDs that may be stored in the cache
+  uuid-cache-size: 100000
+  # Rate limit (per 10 minutes) for background UUID fetching from the Mojang API
+  background-limit: 200
+  # Rate limit (per 10 minutes) for random UUID fetching from the Mojang API
+  impromptu-limit: 300
+  # Timeout (in milliseconds) for non-blocking UUID requests (mostly commands)
+  non-blocking-timeout: 3000
+  # Timeout (in milliseconds) for blocking UUID requests (events)
+  blocking-timeout: 10
+  # Whether or not PlotSquared should read from the legacy database
+  legacy-database-support: true
+  # Whether or not PlotSquared should return Unknown if it fails to fulfill a request
+  unknown-as-default: true
+  # Whether or not automatic background caching should be enabled. It is HIGHLY recommended to keep this turned on. This should only be disabled if the server has a very large number of plots (>100k)
+  background-caching-enabled: true
+  # Whether the PaperMC service is enabled
+  service-paper: true
+  # Whether the LuckPerms service is enabled
+  service-luckperms: true
+  # Whether the Bukkit service is enabled
+  service-bukkit: true
+  # Whether the EssentialsX service is enabled
+  service-essentialsx: true
 
 # Enable or disable parts of the plugin
 # Note: A cache will use some memory if enabled
@@ -22,10 +58,6 @@ enabled-components:
   update-notifications: true
   # Stores user metadata in a database
   persistent-meta: true
-  # Optimizes permission checks
-  permission-cache: true
-  # Optimizes block changing code
-  block-cache: true
   # Getting a rating won't need the database
   rating-cache: true
   # Allow WorldEdit to be restricted to plots
@@ -38,6 +70,8 @@ enabled-components:
   chunk-processor: false
   # Kill mobs on roads (Chicken, Cow, etc.)
   kill-road-mobs: false
+  # Also kill any road mobs that are being ridden, or are leashed
+  kill-owned-road-mobs: false
   # Kill items on roads (Stick, Paper, etc.)
   kill-road-items: false
   # Kill vehicles on roads (Boat, Minecart, etc.)
@@ -56,8 +90,13 @@ enabled-components:
   # Make road regeneration persistent across restarts
   persistent-road-regen: false
   # Enable the `/plot component` preset GUI
-  # Read more about components here: https://wiki.intellectualsites.com/en/plotsquared/installation/plot-components
+  # Read more about components here: https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Plot-Components
   component-presets: true
+  # Enable per user locale
+  per-user-locale: false
+  # The default locale. Before changing the language, make sure you downloaded the appropriate file and put it in the 'lang' folder.
+  # You can find additional translations here: https://intellectualsites.crowdin.com/plotsquared
+  default-locale: "en"
   # Use UUID cache to complete usernames
   extended-username-completion: true
   # Command aliases that will be tab completed
@@ -76,6 +115,142 @@ enabled-components:
   # Whether PlotSquared should hook into MvDWPlaceholderAPI or not
   use-mvdwapi: true
 
+# This is an auto clearing task called `task1`
+auto-clear:
+  task1:
+    threshold: 1
+    required-plots: -1
+    confirmation: true
+    days: 7
+    skip-account-age-days: -1
+    worlds: 
+    - "*"
+    # See: https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Plot-analysis for a description of each value.
+    calibration:
+      variety: 0
+      variety-sd: 0
+      changes: 0
+      changes-sd: 1
+      faces: 0
+      faces-sd: 0
+      data-sd: 0
+      air: 0
+      air-sd: 0
+      data: 0
+
+# Miscellaneous settings
+done:
+  # Require a plot marked as done to download (/plot download)
+  required-for-download: false
+  # Only plots marked as done can be rated
+  required-for-ratings: false
+  # Restrict building when a plot is marked as done
+  restrict-building: false
+  # The limit being how many plots a player can claim
+  counts-towards-limit: true
+
+# Configure the paths that will be used
+paths:
+  schematics: "schematics"
+  templates: "templates"
+
+# Schematic interface related settings
+web:
+  # The web interface for schematics
+  #  - All schematics are anonymous and private
+  #  - Downloads can be deleted by the user
+  #  - Supports plot uploads, downloads and saves
+  url: "https://empcraft.com/plots/"
+  # Whether or not the legacy web interface will be used for /plot download and /plot save
+  # Note that this will be removed in future versions. Updating to Arkitektonika is highly suggested
+  legacy-webinterface: false
+
+# Rating related settings
+ratings:
+  # Replace the rating system with a like system. Will add /plot like/dislike, and remove the rating command
+  use-likes: false
+  # Rating categories
+  categories: []
+  # The blocks to use for the rating GUI if categories are set above
+  block-0: "brown_wool"
+  block-1: "red_wool"
+  block-2: "orange_wool"
+  block-3: "yellow_wool"
+  block-4: "lime_wool"
+  block-5: "cyan_wool"
+  block-6: "blue_wool"
+  block-7: "purple_wool"
+  block-8: "magenta_wool"
+
+# Teleportation related settings
+teleport:
+  # Teleport to your plot on death
+  on-death: false
+  # Teleport to your plot on login
+  on-login: false
+  # Teleport to your plot on claim (/plot claim)
+  on-claim: true
+  # Teleport to your plot on auto (/plot auto)
+  on-auto: true
+  # Add a delay to all teleport commands (in seconds)
+  # Assign `plots.teleport.delay.bypass` to bypass the cooldown
+  delay: 0
+  # Teleport outside of the plot before clearing
+  on-clear: false
+  # Teleport outside of the plot before deleting
+  on-delete: false
+  # The visit command is ordered by world instead of globally
+  per-world-visit: false
+  # Search merged plots for having multiple owners when using the visit command
+  visit-merged-owners: true
+
+# Chunk processor related settings
+# See https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Chunk-processor for more information.
+chunk-processor:
+  # Auto trim will not save chunks which aren't claimed
+  auto-trim: false
+  # Max tile entities per chunk
+  max-tiles: 4096
+  # Max entities per chunk
+  max-entities: 512
+  # Disable block physics
+  disable-physics: false
+
+# Claim related settings
+claim:
+  # The max plots claimed in a single `/plot auto <size>` command
+  max-auto-area: 4
+
+# Relating to how many plots someone can claim
+limit:
+  # Should the limit be global (over multiple worlds)
+  global: false
+  # The max range of permissions to check for, e.g. plots.plot.127
+  # The value covers the permission range to check, you need to assign the permission to players/groups still
+  # Modifying the value does NOT change the amount of plots players can claim
+  max-plots: 127
+
+# Settings related to plot titles
+titles:
+  # The big text that appears when you enter a plot.
+  # For a single plot set `/plot flag set titles false` to disable it.
+  # For just you run `/plot toggle titles` to disable it.
+  # For all plots: Add `titles: false` in the worlds.yml flags block to disable it.
+  display-titles: true
+  # Plot titles fading in (duration in ticks)
+  titles-fade-in: 10
+  # Plot titles being shown (duration in ticks)
+  titles-stay: 50
+  # Plot titles fading out (duration in ticks)
+  titles-fade-out: 20
+  # Changes the notification method on plot entry from Title + SubTitle -> ActionBar.
+  # The message still sent to the player is pulled from the lang key "titles.title_entered_plot".
+  # If you would like to still show the owner of the plot, append the contents of "titles.title_entered_plot_sub" onto the former lang key.
+  titles-as-actionbar: false
+  # If the default title should be displayed on plots with server-plot flag set.
+  # Titles will still be sent if the plot-title flag is set.
+  display-default-on-server-plot: false
+
 # Settings related to tab completion
 tab-completions:
   # The time in seconds how long tab completions should remain in cache.
@@ -85,8 +260,27 @@ tab-completions:
 # Settings relating to PlotSquared's GlobalBlockQueue
 queue:
   # Average time per tick spent completing chunk tasks in ms.
-  # Waits (chunk task time / target_time) ticks before completely the next task.
-  target-time: 65
+  # Queue will adjust the batch size to match this.
+  max-iteration-time: 30
+  # Initial number of chunks to process by the queue. This can be increased or
+  # decreased by the queue based on the actual iteration time compared to above.
+  initial-batch-size: 5
+  # Notify progress of the queue to the player or console.
+  notify-progress: true
+  # Interval in ms to notify player or console of progress.
+  notify-interval: 5000
+  # Time to wait in ms before beginning to notify player or console of progress.
+  # Prevent needless notification of progress for short queues.
+  notify-wait: 5000
+  # How lighting should be handled by the queue. Modes:
+  #   - 0 - Do not do any lighting (fastest)
+  #   - 1 - Only execute lighting where blocks with light values are placed
+  #   - 2 - Only execute lighting where blocks with light values are placed or removed/replaced
+  #   - 3 - Always execute lighting (slowest)
+  lighting-mode: 1
+  # If blocks at the edges of queued operations should be set causing updates
+  #  - Slightly slower, but prevents issues such as fences left connected to nothing
+  update-edges: true
 
 # Enable or disable parts of the plugin specific to using Paper
 paper-components:
@@ -107,40 +301,14 @@ paper-components:
   # Use Paper's async tab completion
   async-tab-completion: false
 
-# Rating related settings
-ratings:
-  # Replace the rating system with a like system. Will add /plot like/dislike, and remove the rating command
-  use-likes: false
-  # Rating categories
-  categories: []
-
-# Claim related settings
-claim:
-  # The max plots claimed in a single `/plot auto <size>` command
-  max-auto-area: 4
-
-# Redstone related settings
-redstone:
-  # Disable redstone in unoccupied plots
-  disable-unoccupied: false
-  # Disable redstone when all owners/trusted/members are offline
-  disable-offline: false
-  # Detect and cancel invalid pistons on the edge of plots (e.g. placed with WorldEdit)
-  detect-invalid-edge-pistons: false
-
-# Teleportation related settings
-teleport:
-  # Teleport to your plot on death
-  on-death: false
-  # Teleport to your plot on login
-  on-login: false
-  # Teleport to your plot on claim
-  on-claim: true
-  # Add a delay to all teleport commands
-  # Assign `plots.teleport.delay.bypass` to bypass the cooldown.
-  delay: 0
-  # The visit command is ordered by world instead of globally
-  per-world-visit: false
+# Enable or disable all of or parts of the FAWE-P2 hook
+fawe-components:
+  # Use FAWE for queue handling.
+  fawe-hook: true
+  cuboids: true
+  clear: true
+  copy-and-swap: true
+  set-biome: true
 
 # Confirmation timeout related settings
 confirmation:
@@ -148,7 +316,7 @@ confirmation:
   confirmation-timeout-seconds: 20
 
 # Backup related settings
-# See https://wiki.intellectualsites.com/en/plotsquared/backups for more information.
+# See https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Backups for more information.
 backup:
   # Automatically backup plots when destructive commands are performed, e.g. /plot clear
   automatic-backups: true
@@ -157,59 +325,53 @@ backup:
   # Whether or not backups should be deleted when the plot is unclaimed
   delete-on-unclaim: true
 
-# Relating to how many plots someone can claim
-limit:
-  # Should the limit be global (over multiple worlds)
-  global: false
-  # The max. range of permissions to check e.g. plots.plot.127
-  # The value covers the range to check only, you need to assign the permission to players/groups still
-  # Modifying the value does NOT change the amount of plots players can claim
-  max-plots: 127
-
 # Chat related settings
 chat:
-  # Sometimes console color doesn't work, you can disable it here
-  console-color: true
-  # Should the chat be interactive?
-  interactive: true
+  # Should the plot chat be logged to console?
+  log-plotchat-to-console: true
+  # Whether an action bar message should be send over a chat message for notification purposes such for the 
+  # notify-enter, notify-leave, greeting or farewell flag.
+  notification-as-actionbar: false
+  # The click event actions that should be removed from user input in e.g. plot flags like 'greeting'.
+  # Actions like 'RUN_COMMAND' may be used maliciously as players could trick staff into clicking on messages
+  # triggering destructive commands.
+  click-event-actions-to-remove: 
+  - "OPEN_URL"
+  - "OPEN_FILE"
+  - "RUN_COMMAND"
+  - "SUGGEST_COMMAND"
+  - "CHANGE_PAGE"
+  - "COPY_TO_CLIPBOARD"
 
-# Misc settings
-done:
-  # Require a plot marked as done to download (/plot download)
-  required-for-download: false
-  # Only plots marked as done can be rated
-  required-for-ratings: false
-  # Restrict building when a plot is marked as done
-  restrict-building: false
-  # The limit being how many plots a player can claim
-  counts-towards-limit: true
+# Used to format the plot creation date placeholder. Modifying the format does not affect the storage time.
+timeformat:
+  # The date used formatted in ISO 8601
+  date-format: "yyyy-MM-dd HH:mm:ss z"
+  # The time zone used
+  time-zone: "GMT"
 
-# Schematic and Asset interface related settings
-web:
-  # The web interface for schematics
-  #  - All schematics are anonymous and private
-  #  - Downloads can be deleted by the user
-  #  - Supports plot uploads, downloads and saves
-  url: "https://empcraft.com/plots/"
-  # The web interface for assets
-  #  - All schematics are organized and public
-  #  - Assets can be searched, selected and downloaded
-  assets: "https://empcraft.com/assetpack/"
-
-# Configure the paths that will be used
-paths:
-  schematics: "schematics"
-  scripts: "scripts"
-  templates: "templates"
-  translations: "translations"
+# Schematic web interface related settings
+arkitektonika:
+  # The url of the backend server (Arkitektonika)
+  backend-url: "https://api.schematic.cloud/"
+  # The url used to generate a download link from.
+  # {key} will be replaced with the generated key
+  download-url: "https://api.schematic.cloud/download/{key}"
+  # The url used to generate a deletion link from.
+  # {key} will be replaced with the generated key
+  delete-url: "https://api.schematic.cloud/delete/{key}"
 
 # Schematic Settings
-# See https://wiki.intellectualsites.com/en/plotsquared/schematics/on-claim for more information.
+# See https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Schematic-on-Claim for more information.
 schematics:
   # Whether schematic based generation should paste schematic on top of plots, or from Y=1
   paste-on-top: true
   # Whether schematic based road generation should paste schematic on top of roads, or from Y=1
   paste-road-on-top: true
+  # If schematics that do not match a plot's size should be pasted anyway
+  #  - This will still only paste a schematic with a plot's bounds.
+  #  - If a schematic is too big, it will cut off, and if too small, will not full the plot.
+  paste-mismatches: true
 
 # Update checker settings
 updatechecker:
@@ -225,7 +387,7 @@ general:
   # Replace wall when merging
   merge-replace-wall: true
   # Blocks that may not be used in plot components
-  # Checkout the wiki article regarding plot components before modifying: https://wiki.intellectualsites.com/en/plotsquared/installation/plot-components
+  # Checkout the wiki article regarding plot components before modifying: https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Plot-Components
   invalid-blocks: 
   - "acacia_button"
   - "acacia_fence_gate"
@@ -502,72 +664,3 @@ general:
   - "tube_coral_block"
   - "tube_coral_fan"
   - "tube_coral_wall_fan"
-
-# UUID settings
-# DO NOT EDIT them unless you know what you are doing.
-uuid:
-  # Force using offline UUIDs (it usually detects the right mode)
-  offline: false
-  # Force using lowercase UUIDs
-  force-lowercase: false
-  # Use a database to store UUID/name info
-  use-sqluuidhandler: false
-  # How many UUIDs that may be stored in the cache
-  uuid-cache-size: 100000
-  # Rate limit (per 10 minutes) for background UUID fetching from the Mojang API
-  background-limit: 200
-  # Rate limit (per 10 minutes) for random UUID fetching from the Mojang API
-  impromptu-limit: 300
-  # Timeout (in milliseconds) for non-blocking UUID requests (mostly commands)
-  non-blocking-timeout: 3000
-  # Timeout (in milliseconds) for blocking UUID requests (events)
-  blocking-timeout: 10
-  # Whether or not PlotSquared should read from the legacy database
-  legacy-database-support: true
-  # Whether or not PlotSquared should return Unknown if it fails to fulfill a request
-  unknown-as-default: true
-  # Whether or not automatic background caching should be enabled. It is HIGHLY recommended to keep this turned on. This should only be disabled if the server has a very large number of plots (>100k)
-  background-caching-enabled: true
-  # Whether the PaperMC service is enabled
-  service-paper: true
-  # Whether the LuckPerms service is enabled
-  service-luckperms: true
-  # Whether the Bukkit service is enabled
-  service-bukkit: true
-  # Whether the EssentialsX service is enabled
-  service-essentialsx: true
-
-# Chunk processor related settings
-# See https://wiki.intellectualsites.com/en/plotsquared/optimization/chunk-processor for more information.
-chunk-processor:
-  # Auto trim will not save chunks which aren't claimed
-  auto-trim: false
-  # Max tile entities per chunk
-  max-tiles: 4096
-  # Max entities per chunk
-  max-entities: 512
-  # Disable block physics
-  disable-physics: false
-
-# This is an auto clearing task called `task1`
-auto-clear:
-  task1:
-    threshold: 1
-    required-plots: -1
-    confirmation: true
-    days: 7
-    skip-account-age-days: -1
-    worlds: 
-    - "*"
-    # See: https://wiki.intellectualsites.com/en/plotsquared/optimization/plot-analysis for a description of each value.
-    calibration:
-      variety: 0
-      variety-sd: 0
-      changes: 0
-      changes-sd: 1
-      faces: 0
-      faces-sd: 0
-      data-sd: 0
-      air: 0
-      air-sd: 0
-      data: 0
