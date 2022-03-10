@@ -46,6 +46,8 @@ worlds:
       gamemode: creative
       min_height: 1
       border: false
+      max_gen_height: 319
+      min_gen_height: -64
     event:
       spawn:
         egg: false
@@ -101,6 +103,8 @@ worlds:
       gamemode: creative
       min_height: 1
       border: false
+      max_gen_height: 319
+      min_gen_height: -64
     event:
       spawn:
         egg: false

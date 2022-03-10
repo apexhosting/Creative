@@ -90,7 +90,7 @@ enabled-components:
   # Make road regeneration persistent across restarts
   persistent-road-regen: false
   # Enable the `/plot component` preset GUI
-  # Read more about components here: https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Plot-Components
+  # Read more about components here: https://intellectualsites.github.io/plotsquared-documentation/customization/plot-components
   component-presets: true
   # Enable per user locale
   per-user-locale: false
@@ -123,9 +123,11 @@ auto-clear:
     confirmation: true
     days: 7
     skip-account-age-days: -1
+    # True, if a plot should be deleted if the plot owner is unknown to the server
+    delete-if-owner-is-unknown: false
     worlds: 
     - "*"
-    # See: https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Plot-analysis for a description of each value.
+    # See: https://intellectualsites.github.io/plotsquared-documentation/optimization/plot-analysis for a description of each value.
     calibration:
       variety: 0
       variety-sd: 0
@@ -205,7 +207,7 @@ teleport:
   visit-merged-owners: true
 
 # Chunk processor related settings
-# See https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Chunk-processor for more information.
+# See https://intellectualsites.github.io/plotsquared-documentation/optimization/chunk-processor for more information.
 chunk-processor:
   # Auto trim will not save chunks which aren't claimed
   auto-trim: false
@@ -316,7 +318,7 @@ confirmation:
   confirmation-timeout-seconds: 20
 
 # Backup related settings
-# See https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Backups for more information.
+# See https://intellectualsites.github.io/plotsquared-documentation/plot-backups for more information.
 backup:
   # Automatically backup plots when destructive commands are performed, e.g. /plot clear
   automatic-backups: true
@@ -362,7 +364,7 @@ arkitektonika:
   delete-url: "https://api.schematic.cloud/delete/{key}"
 
 # Schematic Settings
-# See https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Schematic-on-Claim for more information.
+# See https://intellectualsites.github.io/plotsquared-documentation/schematics/schematic-on-claim for more information.
 schematics:
   # Whether schematic based generation should paste schematic on top of plots, or from Y=1
   paste-on-top: true
@@ -372,6 +374,12 @@ schematics:
   #  - This will still only paste a schematic with a plot's bounds.
   #  - If a schematic is too big, it will cut off, and if too small, will not full the plot.
   paste-mismatches: true
+  # If the wall height should be taken into account when calculating the road schematic paste height
+  #  - If true, will use the lower of wall and road height.
+  #  - If true, will ensure correct schematic behaviour (no parts are cut off).
+  #  - Set to false if you experience the road being set one block too low
+  #    (only for road schematics created pre 6.1.4).
+  use-wall-in-road-schem-height: true
 
 # Update checker settings
 updatechecker:
@@ -386,8 +394,10 @@ general:
   scientific: false
   # Replace wall when merging
   merge-replace-wall: true
+  # Always show explosion Particles, even if explosion flag is set to false
+  always-show-explosions: false
   # Blocks that may not be used in plot components
-  # Checkout the wiki article regarding plot components before modifying: https://github.com/IntellectualSites/PlotSquared-Documentation/wiki/Plot-Components
+  # Checkout the wiki article regarding plot components before modifying: https://intellectualsites.github.io/plotsquared-documentation/customization/plot-components
   invalid-blocks: 
   - "acacia_button"
   - "acacia_fence_gate"
