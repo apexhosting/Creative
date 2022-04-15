@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.7]
+
+### Changed
+- Permissions updated.
+
 ## [2.6]
 
 ### Changed
@@ -83,7 +88,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial commit of pack to Github for version control
-
+[2.7]: https://github.com/apexhosting/Creative/releases/tag/2.7
 [2.6]: https://github.com/apexhosting/Creative/releases/tag/2.6
 [2.5]: https://github.com/apexhosting/Creative/releases/tag/2.5
 [2.4]: https://github.com/apexhosting/Creative/releases/tag/2.4
