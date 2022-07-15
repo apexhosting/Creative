@@ -1,7 +1,0 @@
-config:
-  metrics: true
-  WorldGuard:
-    enabled: true
-  PlotSquared:
-    enabled: true
-    RegionClearEvent: true

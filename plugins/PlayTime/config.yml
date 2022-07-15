@@ -1,0 +1,71 @@
+# Playtime By F64_Rx - Need Help? PM me on Spigot or post in the discussion.
+# 
+#  =================
+#  | CONFIGURATION |
+#  =================
+# 
+#  available placeholders
+#  %playtime_player% - returns the player name
+#  %offlineplayer% - returns the offline player name
+#  %offlinetime% - shows offline time of a player
+#  %offlinetimesjoined% - shows the amount of joins a player has had
+#  %playtime_time% - shows time played
+#  %playtime_timesjoined% - shows the amount of times the player has joined the server
+#  %playtime_serveruptime% - shows the uptime of the server
+#  %playtime_session% - shows the players current session time
+#  %playtime_position% - shows the players current position
+#  %playtime_top_#_name% - shows the name of the top 10
+#  %playtime_top_#_time% - shows the time of the top 10
+#  You can also use any other placeholder that PlaceholderAPI supports :) 
+
+time:
+  second:
+    enabled: true
+    prefix: s
+  minute:
+    enabled: true
+    prefix: m
+  hour:
+    enabled: true
+    prefix: h
+  day:
+    enabled: true
+    prefix: d
+  week:
+    enabled: true
+    prefix: w
+messages:
+  no_permission:
+  - '&8[&bPlayTime&8] &cYou don''t have permission.'
+  doesnt_exist:
+  - '&8[&bPlayTime&8] &cPlayer %offlineplayer% has not joined before!'
+  player:
+  - '&b%playtime_player%''s Stats are:'
+  - '&bPlayTime: &7%playtime_time%'
+  - '&bTimes Joined: &7%playtime_timesjoined%'
+  - '&bCurrent Session: &7%playtime_session%'
+  offline_players:
+  - '&b%offlineplayer%''s Stats are:'
+  - '&bPlayTime: &7%offlinetime%'
+  - '&bTimes Joined: &7%offlinetimesjoined%'
+  other_players:
+  - '&b%playtime_player%''s Stats are:'
+  - '&bPlayTime: &7%playtime_time%'
+  - '&bTimes Joined: &7%playtime_timesjoined%'
+  - '&bCurrent Session: &7%playtime_session%'
+  playtimetop:
+    header:
+    - '&bTop &e10 &bplayers playtime:'
+    - ''
+    message:
+    - '&a%position%. &b%player%: &e%playtime%'
+    footer:
+    - ''
+  server_uptime:
+  - '&8[&bPlayTime&8] &bServer''s total uptime is %playtime_serveruptime%'
+  reload_config:
+  - '&8[&bPlayTime&8] &bYou have successfully reloaded the config.'
+placeholder:
+  top:
+    name: none
+    time: '-'

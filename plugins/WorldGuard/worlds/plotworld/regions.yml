@@ -9,4 +9,10 @@
 #
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
-regions: {}
+regions:
+    __global__:
+        members: {}
+        flags: {item-drop: deny, item-pickup: deny, tnt: deny, mob-spawning: allow}
+        owners: {}
+        type: global
+        priority: 0

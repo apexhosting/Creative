@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 190.92.13.10
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1657717680038
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1657717890157
+  login: 1657717637056
+money: '0'
+last-account-name: BestBoxing
+logoutlocation:
+  world: 57dba8bb-1c1d-499a-a96e-d493165c1dbe
+  world-name: plotworld
+  x: -7.125543347448312
+  y: 63.0
+  z: -26.752730280318282
+  yaw: -35.71942138671875
+  pitch: 44.100093841552734
+lastlocation:
+  world: 57dba8bb-1c1d-499a-a96e-d493165c1dbe
+  world-name: plotworld
+  x: -65.31125746492414
+  y: 63.0
+  z: -70.57159085021357
+  yaw: -27.007049560546875
+  pitch: 20.755422592163086

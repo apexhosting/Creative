@@ -1,0 +1,87 @@
+#  A DeluxeMenus advanced configuration guide
+#=========================================================
+menu_title: '&1&lPLOTS &7&lMENU'
+open_command:
+  - plotsmenu
+  - plots
+open_commands:
+  - '[sound] BLOCK_BEACON_ACTIVATE'
+  - '[message] &7Opening the plots menu!'
+size: 36
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: deluxemenus.admin
+      deny_commands:
+        - "[message] &8[&bDeluxe&eMenus&8] &cYou don't have perms for this!"
+items:
+  'create':
+    material: DIAMOND
+    slot: 11
+    priority: 1
+    update: true
+    hide_attributes: true
+    display_name: '&a&lCREATE &7&lPLOT'
+    lore:
+      - '&7Click to create a new plot.'
+      - ''
+      - '&7Max Plots: &c%plotsquared_allowed_plot_count%'
+    left_click_commands:
+      - '[player] plot auto'
+      - '[close]'
+  'home':
+    material: ender_pearl
+    slot: 13
+    priority: 1
+    update: true
+    hide_attributes: true
+    display_name: '&e&lTELEPORT &7&lTO &7&lPLOT'
+    lore:
+      - '&7Click to teleport to your plot.'
+      - ''
+      - '&dTeleport to your main plot or use &7/p h # &dto tp to a specific plot.'
+    left_click_commands:
+      - '[player] plot home'
+      - '[close]'
+  'list':
+    material: writable_book
+    slot: 15
+    priority: 1
+    update: true
+    hide_attributes: true
+    display_name: '&c&lLIST &7&lYOUR &7&lPLOTS'
+    lore:
+      - '&7Click to list your plots.'
+      - ''
+      - '&7Plots: &a%plotsquared_plot_count%'
+    left_click_commands:
+      - '[player] plot list mine'
+      - '[close]'
+  'player':
+    material: head-%player_name%
+    slot: 30
+    priority: 1
+    update: true
+    hide_attributes: true
+    display_name: '&d&lSTATS'
+    lore:
+      - ''
+      - '&7Playtime: &5%playtime_player%'
+      - '&7Joined: &5%playtime_timesjoined%'
+      - '&7Plots: &5%plotsquared_plot_count%'
+    left_click_commands:
+      - '[player] plot list mine'
+      - '[close]'
+  'close':
+    material: BARRIER
+    slot: 32
+    priority: 1
+    update: true
+    hide_attributes: true
+    display_name: '&4&lCLOSE MENU'
+    lore:
+      - '&7Click close the menu.'
+    left_click_commands:
+      - '[close]'

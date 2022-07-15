@@ -1,0 +1,36 @@
+title:
+  - '&7&lAPEX &b&lCREATIVE'
+text:
+  - ''
+  - '&7&o%localtime_time%'
+  - '&b{PLAYER}'
+  - ''
+  - '&7Current Plot: &c%plotsquared_currentplot_owner%'
+  - '&7Biome: &e%plotsquared_currentplot_biome%'
+  - '&7Members: &a%plotsquared_currentplot_members%'
+  - ''
+  - '&7Plots: &e%plotsquared_plot_count%'
+  - '&7Alias: &b%plotsquared_currentplot_alias%'
+  - ''
+  - '&bcv.apexmc.co'
+updater:
+  title: 3
+  text: 5
+enabledWorlds:
+  - Creative_world
+  - plotworld
+changeableText:
+  perm_info:
+    text:
+      - '&cscoreboard.default'
+      - '&7scoreboard.default'
+      - '&6scoreboard.default'
+      - '&bscoreboard.default'
+      - '&dscoreboard.default'
+    interval: 10
+scroller:
+  info:
+    text: '&eThis server is running on &e&lQuickBoard! &eThe &c&lbest free scoreboard system on &6&lSpigot!'
+    width: 28
+    spaceBetween: 4
+    update: 2

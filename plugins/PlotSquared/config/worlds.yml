@@ -1,27 +1,28 @@
+configuration_version: v5
 worlds:
   plotworld:
     plot:
-      height: 64
-      size: 42
-      filling: granite
-      floor: grass_block
-      bedrock: true
+      height: 62
       biome: minecraft:forest
-      auto_merge: false
-      create_signs: true
       sign_material: OAK_WALL_SIGN
+      size: 64
+      filling: minecraft:stone
+      auto_merge: false
+      bedrock: true
+      create_signs: true
+      floor: minecraft:grass_block
     wall:
-      block: sandstone_slab
-      block_claimed: petrified_oak_slab
-      filling: granite
-      height: 64
+      filling: minecraft:stone
+      block_claimed: minecraft:polished_andesite_slab
+      height: 62
+      block: minecraft:stone_brick_slab
       place_top_block: true
+    misc_spawn_unowned: false
     road:
+      block: minecraft:gravel
+      flags: {}
+      height: 62
       width: 7
-      height: 64
-      block: quartz_block
-      flags: {}
-    misc_spawn_unowned: false
     home:
       nonmembers: side
       default: side
@@ -30,87 +31,27 @@ worlds:
       on_claim: false
       file: 'null'
       schematics: []
+    chat:
+      forced: false
+      enabled: true
     economy:
       prices:
         merge: 100
         sell: 100
         claim: 100
       use: false
-    chat:
-      enabled: false
-      forced: false
-    limits:
-      max-members: 128
     world:
-      max_height: 256
-      gamemode: creative
-      min_height: 1
-      border: false
       max_gen_height: 319
+      max_height: 320
+      gamemode: creative
       min_gen_height: -64
+      min_height: -63
+      border: false
     event:
       spawn:
-        egg: false
-        breeding: false
+        egg: true
+        breeding: true
         custom: true
     natural_mob_spawning: false
     mob_spawner_spawning: false
     flags: {}
-  Plots:
-    plot:
-      height: 62
-      size: 84
-      filling: dirt
-      floor: grass_block
-      bedrock: true
-      biome: minecraft:forest
-      auto_merge: false
-      create_signs: true
-      sign_material: OAK_WALL_SIGN
-    wall:
-      block: sandstone_slab
-      block_claimed: nether_brick_slab
-      filling: white_concrete
-      height: 62
-      place_top_block: true
-    road:
-      width: 10
-      height: 62
-      block: white_concrete
-      flags: {}
-    misc_spawn_unowned: false
-    home:
-      nonmembers: side
-      default: side
-    schematic:
-      specify_on_claim: false
-      on_claim: false
-      file: 'null'
-      schematics: []
-    economy:
-      prices:
-        merge: 100
-        sell: 100
-        claim: 100
-      use: false
-    chat:
-      enabled: false
-      forced: false
-    limits:
-      max-members: 128
-    world:
-      max_height: 256
-      gamemode: creative
-      min_height: 1
-      border: false
-      max_gen_height: 319
-      min_gen_height: -64
-    event:
-      spawn:
-        egg: false
-        breeding: false
-        custom: true
-    natural_mob_spawning: false
-    mob_spawner_spawning: false
-    flags: {}
-configuration_version: v5
