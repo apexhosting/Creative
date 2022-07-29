@@ -1,5 +1,5 @@
 # PlaceholderAPI
-# Version: 2.10.9
+# Version: 2.11.2
 # Created by: extended_clip
 # Contributors: https://github.com/PlaceholderAPI/PlaceholderAPI/graphs/contributors
 # Issues: https://github.com/PlaceholderAPI/PlaceholderAPI/issues
@@ -10,10 +10,18 @@
 # Download placeholders: /papi ecloud
 check_updates: true
 cloud_enabled: true
-cloud_sorting: "name"
+cloud_sorting: name
 cloud_allow_unverified_expansions: false
 boolean:
   'true': 'yes'
   'false': 'no'
 date_format: MM/dd/yy HH:mm:ss
 debug: false
+expansions:
+  localtime:
+    date_format: dd/MM/yyyy hh:mma
+  player:
+    ping_color:
+      medium: '&e'
+      high: '&c'
+      low: '&a'

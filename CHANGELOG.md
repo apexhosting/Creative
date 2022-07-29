@@ -1,6 +1,19 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [3.0]
+
+- Increased plot size to 64
+- Changed hologram description colors
+- Moved the holograms as suggested
+- Customized the road with stone brick slabs and gravel for a smooth combination of blocks
+- Changed the GUI menu items
+- Disabled plot titles/holos
+- Enabled mob spawning
+- Added missing permissions for plots
+
+- Updated to to Minecraft 1.19.
+
 ## [2.7]
 
 ### Changed
@@ -88,6 +101,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial commit of pack to Github for version control
+[3.0]: https://github.com/apexhosting/Creative/releases/tag/3.0
 [2.7]: https://github.com/apexhosting/Creative/releases/tag/2.7
 [2.6]: https://github.com/apexhosting/Creative/releases/tag/2.6
 [2.5]: https://github.com/apexhosting/Creative/releases/tag/2.5

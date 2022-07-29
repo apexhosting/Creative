@@ -1,0 +1,29 @@
+Mystery-Vaults:
+  '1':
+    BlockFace: EAST
+    Location:
+      world: Creative_world
+      x: -8.0
+      y: 66.0
+      z: -7.0
+  '2':
+    BlockFace: WEST
+    Location:
+      world: Creative_world
+      x: 8.0
+      y: 66.0
+      z: -7.0
+  '3':
+    BlockFace: NORTH
+    Location:
+      world: Creative_world
+      x: -8.0
+      y: 66.0
+      z: 12.0
+  '4':
+    BlockFace: NORTH
+    Location:
+      world: Creative_world
+      x: 8.0
+      y: 66.0
+      z: 12.0

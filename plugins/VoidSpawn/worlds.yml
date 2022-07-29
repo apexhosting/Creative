@@ -1,0 +1,10 @@
+version: 2
+Creative_world:
+  spawn:
+    x: 0.4964497832098168
+    y: 66.0
+    z: -14.529911841278516
+    pitch: -0.75006896
+    yaw: -0.11273193
+    world: Creative_world
+  mode: spawn
