@@ -3,6 +3,10 @@ platform: "Bukkit"
 # Show additional information in console. It helps us at IntellectualSites to find out more about an issue.
 # Leave it off if you don't need it, it can spam your console.
 debug: true
+# The activity of high-frequency event listener can be deactivated here to improve the server performance. 
+# Affected settings: 'redstone' settings here below. Affected flags: 'disable-physics', 'redstone'. 
+# Only deactivate this setting if you do not need any of the mentioned settings or flags.
+high-frequency-listener: true
 
 # Redstone related settings
 redstone:
@@ -24,6 +28,8 @@ uuid:
   uuid-cache-size: 100000
   # Rate limit (per 10 minutes) for background UUID fetching from the Mojang API
   background-limit: 200
+  # Whether the Mojang API service is enabled for impromptu api calls. If false only the Background task will use http requests to fill the UUID cache (requires restart)
+  impromptu-service-mojang-api: true
   # Rate limit (per 10 minutes) for random UUID fetching from the Mojang API
   impromptu-limit: 300
   # Timeout (in milliseconds) for non-blocking UUID requests (mostly commands)
@@ -72,6 +78,8 @@ enabled-components:
   kill-road-mobs: true
   # Also kill any road mobs that are being ridden, or are leashed
   kill-owned-road-mobs: false
+  # Also kill any road mobs that are named
+  kill-named-road-mobs: false
   # Kill items on roads (Stick, Paper, etc.)
   kill-road-items: true
   # Kill vehicles on roads (Boat, Minecart, etc.)
@@ -90,7 +98,7 @@ enabled-components:
   # Make road regeneration persistent across restarts
   persistent-road-regen: true
   # Enable the `/plot component` preset GUI
-  # Read more about components here: https://intellectualsites.github.io/plotsquared-documentation/customization/plot-components
+  # Read more about components here: https://intellectualsites.gitbook.io/plotsquared/customization/plot-components
   component-presets: true
   # Enable per user locale
   per-user-locale: false
@@ -114,6 +122,8 @@ enabled-components:
   - "ap"
   # Whether PlotSquared should hook into MvDWPlaceholderAPI or not
   use-mvdwapi: true
+  # Prevent cross plot beacon effects
+  disable-beacon-effect-overflow: true
 
 # This is an auto clearing task called `task1`
 auto-clear:
@@ -127,7 +137,7 @@ auto-clear:
     delete-if-owner-is-unknown: false
     worlds: 
     - "*"
-    # See: https://intellectualsites.github.io/plotsquared-documentation/optimization/plot-analysis for a description of each value.
+    # See: https://intellectualsites.gitbook.io/plotsquared/optimization/plot-analysis for a description of each value.
     calibration:
       variety: 0
       variety-sd: 0
@@ -205,9 +215,11 @@ teleport:
   per-world-visit: false
   # Search merged plots for having multiple owners when using the visit command
   visit-merged-owners: true
+  # Allows to teleport based on block size instead to spawn on the highest block at the home command
+  sized-based: true
 
 # Chunk processor related settings
-# See https://intellectualsites.github.io/plotsquared-documentation/optimization/chunk-processor for more information.
+# See https://intellectualsites.gitbook.io/plotsquared/optimization/chunk-processor for more information.
 chunk-processor:
   # Auto trim will not save chunks which aren't claimed
   auto-trim: false
@@ -227,10 +239,15 @@ claim:
 limit:
   # Should the limit be global (over multiple worlds)
   global: true
-  # The max range of permissions to check for, e.g. plots.plot.127
+  # The max range of integer permissions to check for, e.g. 'plots.plot.127' or 'plots.set.flag.mob-cap.127'
   # The value covers the permission range to check, you need to assign the permission to players/groups still
   # Modifying the value does NOT change the amount of plots players can claim
   max-plots: 10
+
+# Settings related to flags
+flags:
+  # If "instabreak" should consider the used tool.
+  instabreak-consider-tool: false
 
 # Settings related to plot titles
 titles:
@@ -290,6 +307,8 @@ paper-components:
   paper-listeners: true
   # Prevent entities from leaving plots
   entity-pathing: true
+  # Prevent entities from leaving plots, even by pushing or pulling
+  entity-movement: false
   # Cancel entity spawns when the chunk is loaded if the PlotArea's mob spawning is off
   cancel-chunk-spawn: true
   # Use paper's PlayerLaunchProjectileEvent to cancel projectiles
@@ -303,9 +322,9 @@ paper-components:
   # Use Paper's async tab completion
   async-tab-completion: false
 
-# Enable or disable all of or parts of the FAWE-P2 hook
+# Enable or disable all of or parts of the FastAsyncWorldEdit-PlotSquared hook
 fawe-components:
-  # Use FAWE for queue handling.
+  # Use FastAsyncWorldEdit for queue handling.
   fawe-hook: true
   cuboids: true
   clear: true
@@ -318,7 +337,7 @@ confirmation:
   confirmation-timeout-seconds: 20
 
 # Backup related settings
-# See https://intellectualsites.github.io/plotsquared-documentation/plot-backups for more information.
+# See https://intellectualsites.gitbook.io/plotsquared/plot-backups for more information.
 backup:
   # Automatically backup plots when destructive commands are performed, e.g. /plot clear
   automatic-backups: true
@@ -364,7 +383,7 @@ arkitektonika:
   delete-url: "https://api.schematic.cloud/delete/{key}"
 
 # Schematic Settings
-# See https://intellectualsites.github.io/plotsquared-documentation/schematics/schematic-on-claim for more information.
+# See https://intellectualsites.gitbook.io/plotsquared/schematics/schematic-on-claim for more information.
 schematics:
   # Whether schematic based generation should paste schematic on top of plots, or from Y=1
   paste-on-top: true
@@ -397,7 +416,7 @@ general:
   # Always show explosion Particles, even if explosion flag is set to false
   always-show-explosions: false
   # Blocks that may not be used in plot components
-  # Checkout the wiki article regarding plot components before modifying: https://intellectualsites.github.io/plotsquared-documentation/customization/plot-components
+  # Checkout the wiki article regarding plot components before modifying: https://intellectualsites.gitbook.io/plotsquared/customization/plot-components
   invalid-blocks: 
   - "acacia_button"
   - "acacia_fence_gate"

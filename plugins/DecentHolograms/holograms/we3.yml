@@ -1,0 +1,22 @@
+location: Creative_world:6.142:96.119:47.923
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&2&lWORLDEDIT &7&lCOMMANDS'
+    height: 0.3
+  - content: ''
+    height: 0.3
+  - content: '&c&lEXPERT'
+    height: 0.3
+  - content: '&e//sphere &7- &cCreate a sphere based on x,y,z radius.'
+    height: 0.3
+  - content: '&e//hsphere &7- &cCreate a hollow sphere based on x,y,z radius.'
+    height: 0.3
+  - content: '&e//fill &7- &cFill particular blocks around the player.'
+    height: 0.3
+  actions: {}

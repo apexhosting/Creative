@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 191.97.151.148
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1748643151212
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1748643178490
+  login: 1748642423393
+money: '0'
+last-account-name: Chesvin1
+lastlocation:
+  world: 57dba8bb-1c1d-499a-a96e-d493165c1dbe
+  world-name: plotworld
+  x: -130.38976835440766
+  y: 63.0
+  z: -134.8783902547556
+  yaw: 57.749881744384766
+  pitch: 33.299991607666016
+logoutlocation:
+  world: 64bdd417-584f-4622-9755-0758303ac982
+  world-name: Creative_world
+  x: -3.2844557172801734
+  y: 65.49520087700593
+  z: -29.436498822862234
+  yaw: -172.16270446777344
+  pitch: -9.750064849853516

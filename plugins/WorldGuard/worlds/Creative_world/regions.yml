@@ -13,7 +13,7 @@ regions:
     __global__:
         members: {}
         flags: {time-lock: day, item-drop: deny, build: deny, invincible: allow, item-pickup: deny,
-            pvp: deny, mob-spawning: deny, weather-lock: clear}
+            pvp: deny, weather-lock: clear, mob-spawning: allow}
         owners: {}
         type: global
         priority: 0

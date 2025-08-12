@@ -12,7 +12,6 @@
 #  %playtime_time% - shows time played
 #  %playtime_timesjoined% - shows the amount of times the player has joined the server
 #  %playtime_serveruptime% - shows the uptime of the server
-#  %playtime_session% - shows the players current session time
 #  %playtime_position% - shows the players current position
 #  %playtime_top_#_name% - shows the name of the top 10
 #  %playtime_top_#_time% - shows the time of the top 10

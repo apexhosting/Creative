@@ -1,0 +1,22 @@
+location: Creative_world:-2.478:96.119:48.332
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&2&lWORLDEDIT &7&lCOMMANDS'
+    height: 0.3
+  - content: ''
+    height: 0.3
+  - content: '&6&lADVANCED'
+    height: 0.3
+  - content: '&e//set &7- &cSet all blocks from the region to a pattern.'
+    height: 0.3
+  - content: '&e//replace &7- &cReplaces blocks in region to a pattern.'
+    height: 0.3
+  - content: '&e//walls &7- &cBuild the walls around the outer edges of region..'
+    height: 0.3
+  actions: {}

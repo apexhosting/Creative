@@ -1,0 +1,25 @@
+location: Creative_world:-8.222:96.666:58.655
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&c&lPLOTSQUARED &7&LCOMMANDS'
+    height: 0.3
+  - content: ''
+    height: 0.3
+  - content: '&e/plot add PLAYER &7- &cAllow a user to build in a plot while the plot
+      owner is online.'
+    height: 0.3
+  - content: '&e/plot remove PLAYER &7- &cRemove a player from a plot.'
+    height: 0.3
+  - content: '&e/plot deny PLAYER &7- &cDeny a user from entering a plot.'
+    height: 0.3
+  - content: '&e/plot delete &7- &cDelete your plot.'
+    height: 0.3
+  - content: '&e/plot auto &7- &cGenerate a new empty plot.'
+    height: 0.3
+  actions: {}

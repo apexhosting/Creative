@@ -1,0 +1,16 @@
+location: Creative_world:0.398:69.200:-10.813
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&7&lAPEX &9&lCREATIVE'
+    height: 0.3
+  - content: '&7Welcome to our creative gametype!'
+    height: 0.3
+  - content: '&eUnleash your creativity!'
+    height: 0.3
+  actions: {}

@@ -1,0 +1,12 @@
+location: Creative_world:10.568:68.581:4.548
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&eWorledit commands & more.'
+    height: 0.3
+  actions: {}

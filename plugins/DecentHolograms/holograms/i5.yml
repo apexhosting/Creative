@@ -1,0 +1,12 @@
+location: Creative_world:-1.391:96.649:62.525
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&eHead back to spawn.'
+    height: 0.3
+  actions: {}

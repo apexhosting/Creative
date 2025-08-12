@@ -1,0 +1,22 @@
+location: Creative_world:-11.006:96.119:49.138
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&2&lWORLDEDIT &7&lCOMMANDS'
+    height: 0.3
+  - content: ''
+    height: 0.3
+  - content: '&a&lBASICS'
+    height: 0.3
+  - content: '&e//undo &7- &cUndo the number of Worldedit commands used.'
+    height: 0.3
+  - content: '&e//redo &7- &cRedo the number of //undo used.'
+    height: 0.3
+  - content: '&e//wand &7- &cSummons the selection wand to your hand.'
+    height: 0.3
+  actions: {}
